@@ -192,25 +192,25 @@ export function LeadershipSection() {
               <div className="relative z-20 -mt-7 bg-white rounded-t-[26px] p-6 sm:p-7 shadow-[0_-4px_20px_rgba(0,0,0,0.02)] flex flex-col justify-between flex-1">
                 <div>
                   {/* Short Blue Accent Line */}
-                  <div className="w-6 h-[3px] bg-[#019FF9] rounded-full mb-3" />
+                  <div className="w-8 h-1 bg-[#019FF9] rounded-full mb-3.5" />
 
                   {/* Leader Name */}
-                  <h3 className="text-xl sm:text-[1.35rem] font-bold text-[#0F172A] tracking-tight leading-snug group-hover:text-[#019FF9] transition-colors">
+                  <h3 className="text-2xl sm:text-[26px] font-extrabold text-[#10263D] tracking-tight leading-snug group-hover:text-[#019FF9] transition-colors">
                     {leader.name}
                   </h3>
 
                   {/* Professional Designation */}
-                  <p className="text-sm sm:text-[15px] font-normal text-[#64748B] mt-1 leading-normal">
+                  <p className="text-sm sm:text-base font-medium text-[#64748B] mt-1.5 leading-normal">
                     {leader.role}
                   </p>
                 </div>
 
                 {/* "Read Full Profile" Action Row with Blue Circle Arrow Button */}
-                <div className="mt-5 sm:mt-6 pt-1 flex items-center justify-between">
-                  <span className="text-xs sm:text-sm font-bold text-[#019FF9] group-hover:text-[#0088EB] transition-colors">
+                <div className="mt-6 pt-1 flex items-center justify-between">
+                  <span className="text-sm sm:text-[15px] font-bold text-[#019FF9] group-hover:text-[#0088EB] transition-colors">
                     Read Full Profile
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-[#019FF9] text-white flex items-center justify-center shadow-[0_4px_10px_rgba(1,159,249,0.35)] group-hover:scale-110 group-hover:bg-[#0088EB] transition-all duration-300 shrink-0">
+                  <div className="w-9 h-9 rounded-full bg-[#019FF9] text-white flex items-center justify-center shadow-[0_4px_12px_rgba(1,159,249,0.35)] group-hover:scale-110 group-hover:bg-[#0088EB] transition-all duration-300 shrink-0">
                     <ArrowRight className="w-4 h-4 stroke-[2.5]" />
                   </div>
                 </div>
