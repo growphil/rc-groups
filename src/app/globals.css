@@ -14,6 +14,7 @@
 
 html {
   color-scheme: light;
+  scroll-behavior: smooth;
   font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -24,6 +25,11 @@ body {
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+:focus-visible {
+  outline: 2px solid #019FF9;
+  outline-offset: 2px;
 }
 
 /* Ensure form controls & buttons inherit Inter font */

@@ -103,25 +103,23 @@ export function AboutSection() {
           </div>
         </div>
 
-        {/* Four Principles Row Matching Reference Screenshot */}
+        {/* Four Principles Row */}
         <div className="mt-16 pt-12 border-t border-slate-100">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {principles.map((item, index) => (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {principles.map((item) => (
               <div
                 key={item.id}
-                className={`relative flex flex-col items-start ${
-                  index !== principles.length - 1
-                    ? "lg:border-r lg:border-slate-100 lg:pr-6"
-                    : ""
-                }`}
+                className="group p-5 rounded-2xl bg-[#F8FBFE] hover:bg-white border border-[#E3EEF8]/80 hover:border-[#019FF9]/40 shadow-xs hover:shadow-[0_10px_25px_-5px_rgba(1,159,249,0.12)] transition-all duration-300 flex flex-col items-start hover:-translate-y-1"
               >
                 {/* Circular Icon in soft light blue */}
-                <div className="w-12 h-12 rounded-full bg-[#EBF6FF] flex items-center justify-center mb-4 transition-transform duration-300 hover:scale-110">
-                  {item.icon}
+                <div className="w-12 h-12 rounded-xl bg-[#EBF6FF] group-hover:bg-[#019FF9] text-[#019FF9] group-hover:text-white flex items-center justify-center mb-4 transition-all duration-300 shadow-xs">
+                  {React.cloneElement(item.icon, {
+                    className: "w-5 h-5 transition-colors duration-300 group-hover:text-white text-[#019FF9]",
+                  })}
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base font-bold text-slate-900 mb-1">
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-[#019FF9] transition-colors mb-1.5">
                   {item.title}
                 </h3>
 

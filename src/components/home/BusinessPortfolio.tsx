@@ -96,9 +96,9 @@ function SectorCard({
   return (
     <Link
       href={`/businesses/${sector.slug}`}
-      className="group block bg-white rounded-2xl p-2.5 sm:p-3 border border-[#E3EEF8] hover:border-[#019FF9]/60 shadow-[0_4px_20px_-4px_rgba(1,159,249,0.06)] hover:shadow-[0_14px_30px_-6px_rgba(1,159,249,0.18)] hover:-translate-y-1 transition-all duration-300"
+      className="group block bg-white rounded-2xl p-3 border border-[#E3EEF8] hover:border-[#019FF9]/60 shadow-[0_4px_20px_-4px_rgba(1,159,249,0.06)] hover:shadow-[0_18px_36px_-8px_rgba(1,159,249,0.20)] hover:-translate-y-1.5 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#019FF9] focus-visible:outline-none"
     >
-      {/* Landscape Image */}
+      {/* Landscape Image Container */}
       <div
         className={`relative w-full ${aspectRatio} rounded-xl overflow-hidden bg-slate-100 mb-3`}
       >
@@ -106,9 +106,17 @@ function SectorCard({
           src={sector.image}
           alt={sector.name}
           fill
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 360px"
         />
+
+        {/* Floating Frosted Sector Badge */}
+        <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-bold tracking-wider uppercase">
+          Sector {sector.id}
+        </div>
+
+        {/* Subtle Bottom Image Gradient Scrim */}
+        <div className="absolute inset-x-0 bottom-0 h-10 bg-gradient-to-t from-black/25 to-transparent pointer-events-none" />
       </div>
 
       {/* Info Section */}
@@ -132,8 +140,8 @@ function SectorCard({
         </div>
 
         {/* Circular Action Arrow */}
-        <div className="w-8 h-8 rounded-full bg-[#EBF6FF] text-[#019FF9] group-hover:bg-[#019FF9] group-hover:text-white transition-all flex items-center justify-center shrink-0 shadow-xs">
-          <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />
+        <div className="w-8 h-8 rounded-full bg-[#EBF6FF] text-[#019FF9] group-hover:bg-[#019FF9] group-hover:text-white transition-all flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110">
+          <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
         </div>
       </div>
     </Link>
