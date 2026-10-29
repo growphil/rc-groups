@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FFFFFF;
+  --foreground: #111827;
+  --brand-blue: #019FF9;
+  --brand-surface: #F0F8FF;
+  --brand-border: #DCE8F2;
+  --brand-dark: #071426;
+  --brand-muted: #64748B;
+}
+
+html {
+  color-scheme: light;
+  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure form controls & buttons inherit Inter font */
+input,
+button,
+select,
+textarea,
+optgroup {
+  font-family: inherit;
+}
+
+::selection {
+  background-color: #019FF9;
+  color: #FFFFFF;
+}
+
+/* Glassmorphism primitives */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(220, 232, 242, 0.8);
+}
+
+.glass-panel-dark {
+  background: rgba(7, 20, 38, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(1, 159, 249, 0.25);
+}
+
+.electric-glow {
+  box-shadow: 0 0 25px rgba(1, 159, 249, 0.35);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #019FF9;
+}

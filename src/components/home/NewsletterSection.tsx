@@ -1,0 +1,72 @@
+"use client";
+
+import React, { useState } from "react";
+import { Mail, CheckCircle2, ArrowRight } from "lucide-react";
+
+export function NewsletterSection() {
+  const [email, setEmail] = useState("");
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubscribe = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setError("Please provide a valid email address.");
+      return;
+    }
+    setError("");
+    setIsSubscribed(true);
+  };
+
+  return (
+    <section className="bg-white py-12 border-t border-[#DCE8F2]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#F0F8FF] via-white to-[#F0F8FF] border border-[#DCE8F2] shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* Text */}
+          <div className="max-w-xl text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#019FF9] uppercase tracking-wider mb-2">
+              <Mail className="w-3.5 h-3.5" />
+              <span>Stay Connected</span>
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+              Get the latest updates from <span className="text-[#019FF9]">RC Group</span>
+            </h3>
+            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+              Receive quarterly investor reports, clean energy research, and corporate milestone announcements.
+            </p>
+          </div>
+
+          {/* Form */}
+          <div className="w-full lg:max-w-md">
+            {isSubscribed ? (
+              <div className="flex items-center gap-2 text-emerald-700 bg-emerald-50 px-5 py-3 rounded-2xl border border-emerald-200 text-sm font-semibold">
+                <CheckCircle2 className="w-5 h-5 shrink-0" />
+                <span>Thank you! You are subscribed to RC Group updates.</span>
+              </div>
+            ) : (
+              <form onSubmit={handleSubscribe} className="space-y-2">
+                <div className="flex items-center gap-2 p-1.5 rounded-full bg-white border border-[#DCE8F2] shadow-sm focus-within:ring-2 focus-within:ring-[#019FF9]/40 focus-within:border-[#019FF9]">
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your corporate email address..."
+                    className="w-full px-4 py-2 text-sm text-slate-900 bg-transparent placeholder:text-slate-400 focus:outline-none"
+                  />
+                  <button
+                    type="submit"
+                    className="shrink-0 px-6 py-2.5 rounded-full bg-[#019FF9] hover:bg-[#008ee0] text-white text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-1.5"
+                  >
+                    <span>Subscribe</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </button>
+                </div>
+                {error && <p className="text-rose-500 text-xs px-4">{error}</p>}
+              </form>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
