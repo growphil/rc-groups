@@ -399,6 +399,15 @@ export function CinematicMilestones() {
             <p className="text-slate-300 text-sm sm:text-base mt-3">
               Over two decades of purposeful enterprise across healthcare, renewable energy, and community ventures.
             </p>
+            <div className="mt-6">
+              <Link
+                href="/journey"
+                className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#019FF9] hover:bg-[#0089DB] text-white text-sm font-bold shadow-[0_8px_25px_rgba(1,159,249,0.45)] hover:shadow-[0_12px_32px_rgba(1,159,249,0.65)] hover:-translate-y-0.5 transition-all duration-300 group"
+              >
+                <span>Explore Full Journey</span>
+                <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1.5" />
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -472,13 +481,13 @@ export function CinematicMilestones() {
             A Journey of Purpose and Progress
           </h2>
 
-          <div className="mt-4">
+          <div className="mt-5">
             <Link
               href="/journey"
-              className="inline-flex items-center gap-2 px-5 sm:px-6 py-2 sm:py-2.5 rounded-full bg-white/10 hover:bg-white text-white hover:text-slate-900 text-xs sm:text-sm font-bold border border-white/30 backdrop-blur-md transition-all duration-300 shadow-sm hover:shadow-lg group"
+              className="inline-flex items-center gap-2.5 px-7 py-3 sm:px-8 sm:py-3.5 rounded-full bg-[#019FF9] hover:bg-[#0089DB] text-white text-sm sm:text-[15px] font-bold shadow-[0_8px_25px_rgba(1,159,249,0.45)] hover:shadow-[0_12px_32px_rgba(1,159,249,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
             >
               <span>Explore Full Journey</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 sm:w-[18px] sm:h-[18px] stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1.5" />
             </Link>
           </div>
         </header>
