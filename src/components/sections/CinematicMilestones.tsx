@@ -402,7 +402,7 @@ export function CinematicMilestones() {
             <div className="mt-6">
               <Link
                 href="/journey"
-                className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#019FF9] hover:bg-[#0089DB] text-white text-sm font-bold shadow-[0_8px_25px_rgba(1,159,249,0.45)] hover:shadow-[0_12px_32px_rgba(1,159,249,0.65)] hover:-translate-y-0.5 transition-all duration-300 group"
+                className="inline-flex items-center gap-2.5 px-7 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm font-bold shadow-[0_8px_25px_rgba(30,144,255,0.45)] hover:shadow-[0_12px_32px_rgba(30,144,255,0.65)] hover:-translate-y-0.5 transition-all duration-300 group"
               >
                 <span>Explore Full Journey</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1.5" />
@@ -417,15 +417,15 @@ export function CinematicMilestones() {
                 className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-xl"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-[#019FF9] bg-[#019FF9]/10 px-3 py-1 rounded-full border border-[#019FF9]/20">
+                  <span className="text-xs font-bold text-[#00CED1] bg-[#00CED1]/10 px-3 py-1 rounded-full border border-[#00CED1]/30">
                     {milestone.year}
                   </span>
-                  <span className="text-xs text-slate-500 font-medium">
+                  <span className="text-xs text-slate-400 font-medium">
                     {milestone.sectorName}
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-white">{milestone.title}</h3>
-                <span className="text-xs text-[#019FF9] font-semibold mt-1 block">
+                <span className="text-xs text-[#87CEEB] font-semibold mt-1 block">
                   {milestone.subtitle}
                 </span>
                 <p className="text-sm text-slate-300 mt-3 leading-relaxed">
@@ -484,10 +484,10 @@ export function CinematicMilestones() {
           <div className="mt-5">
             <Link
               href="/journey"
-              className="inline-flex items-center gap-2.5 px-7 py-3 sm:px-8 sm:py-3.5 rounded-full bg-[#019FF9] hover:bg-[#0089DB] text-white text-sm sm:text-[15px] font-bold shadow-[0_8px_25px_rgba(1,159,249,0.45)] hover:shadow-[0_12px_32px_rgba(1,159,249,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-none"
+              className="inline-flex items-center gap-2.5 px-7 py-3 sm:px-8 sm:py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm sm:text-[15px] font-bold shadow-[0_8px_25px_rgba(30,144,255,0.45)] hover:shadow-[0_12px_32px_rgba(30,144,255,0.65)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group focus-visible:ring-2 focus-visible:ring-[#00CED1] focus-visible:outline-none"
             >
               <span>Explore Full Journey</span>
-              <ArrowRight className="w-4 h-4 sm:w-[18px] sm:h-[18px] stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1.5" />
+              <ArrowRight className="w-4 h-4 sm:w-[18px] sm:h-[18px] stroke-[2.5] transition-transform duration-300 group-hover:translate-x-1.5 text-white" />
             </Link>
           </div>
         </header>

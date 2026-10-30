@@ -21,17 +21,17 @@ export function NewsletterSection() {
   return (
     <section className="bg-white py-12 border-t border-[#DCE8F2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#F0F8FF] via-white to-[#F0F8FF] border border-[#DCE8F2] shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
+        <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#F5F9FD] via-white to-[#F5F9FD] border border-[#DCE8F2] shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text */}
           <div className="max-w-xl text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#019FF9] uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-2">
               <Mail className="w-3.5 h-3.5" />
               <span>Stay Connected</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              Get the latest updates from <span className="text-[#019FF9]">RC Group</span>
+            <h3 className="text-2xl sm:text-3xl font-black text-[#071426] tracking-tight">
+              Get the latest updates from <span className="text-[#1E90FF]">RC Group</span>
             </h3>
-            <p className="text-xs sm:text-sm text-slate-600 mt-2">
+            <p className="text-xs sm:text-sm text-[#475569] mt-2">
               Receive quarterly investor reports, clean energy research, and corporate milestone announcements.
             </p>
           </div>
@@ -45,7 +45,7 @@ export function NewsletterSection() {
               </div>
             ) : (
               <form onSubmit={handleSubscribe} className="space-y-3">
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-1.5 sm:p-2 rounded-2xl sm:rounded-full bg-white border border-[#DCE8F2] shadow-sm focus-within:ring-2 focus-within:ring-[#019FF9]/40 focus-within:border-[#019FF9]">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-1.5 sm:p-2 rounded-2xl sm:rounded-full bg-white border border-[#DCE8F2] shadow-sm focus-within:ring-2 focus-within:ring-[#1E90FF]/40 focus-within:border-[#1E90FF]">
                   <input
                     type="email"
                     inputMode="email"
@@ -57,7 +57,7 @@ export function NewsletterSection() {
                   />
                   <button
                     type="submit"
-                    className="shrink-0 px-6 py-3 sm:py-2.5 rounded-xl sm:rounded-full bg-[#019FF9] hover:bg-[#008ee0] active:bg-[#0080ca] text-white text-sm font-bold transition-all shadow-sm flex items-center justify-center gap-2 min-h-[44px]"
+                    className="shrink-0 px-6 py-3 sm:py-2.5 rounded-xl sm:rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm font-bold transition-all shadow-sm flex items-center justify-center gap-2 min-h-[44px]"
                   >
                     <span>Subscribe</span>
                     <ArrowRight className="w-4 h-4" />
@@ -72,3 +72,5 @@ export function NewsletterSection() {
     </section>
   );
 }
+
+export default NewsletterSection;

@@ -70,14 +70,14 @@ export default function ContactPage() {
   return (
     <div className="pt-24 pb-20">
       {/* Hero Banner */}
-      <section className="py-20 bg-gradient-to-b from-[#F0F8FF] to-white border-b border-[#DCE8F2]">
+      <section className="py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#019FF9] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-4">
               Get in Touch
             </div>
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
-              Contact &amp; <span className="text-[#019FF9]">Partnership Inquiries</span>
+              Contact &amp; <span className="text-[#1E90FF]">Partnership Inquiries</span>
             </h1>
             <p className="mt-6 text-lg text-slate-600 leading-relaxed">
               We welcome dialogue with investors, enterprise clients, community
@@ -94,9 +94,9 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Contact Information Cards (Col 1-5) */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-8 rounded-3xl bg-[#F0F8FF]/80 border border-[#DCE8F2] shadow-card space-y-6">
+              <div className="p-8 rounded-3xl bg-[#F5F9FD]/80 border border-[#DCE8F2] shadow-card space-y-6">
                 <div>
-                  <span className="text-xs font-bold text-[#019FF9] uppercase tracking-wider">
+                  <span className="text-xs font-bold text-[#1E90FF] uppercase tracking-wider">
                     Official Head Office
                   </span>
                   <h3 className="text-2xl font-bold text-slate-900 mt-1">
@@ -106,7 +106,7 @@ export default function ContactPage() {
 
                 <div className="space-y-4 pt-2 text-sm text-slate-700">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#019FF9] border border-[#DCE8F2] shrink-0">
+                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#1E90FF] border border-[#DCE8F2] shrink-0">
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
@@ -116,14 +116,14 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#019FF9] border border-[#DCE8F2] shrink-0">
+                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#1E90FF] border border-[#DCE8F2] shrink-0">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">Direct Telephone</p>
                       <a
                         href={`tel:${contactDetails.phone.replace(/\s+/g, "")}`}
-                        className="text-[#019FF9] font-semibold hover:underline"
+                        className="text-[#1E90FF] font-semibold hover:underline"
                       >
                         {contactDetails.phoneFormatted}
                       </a>
@@ -131,14 +131,14 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#019FF9] border border-[#DCE8F2] shrink-0">
+                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#1E90FF] border border-[#DCE8F2] shrink-0">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
                       <p className="font-bold text-slate-900">Executive Email</p>
                       <a
                         href={`mailto:${contactDetails.email}`}
-                        className="text-[#019FF9] font-semibold hover:underline"
+                        className="text-[#1E90FF] font-semibold hover:underline"
                       >
                         {contactDetails.email}
                       </a>
@@ -146,7 +146,7 @@ export default function ContactPage() {
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#019FF9] border border-[#DCE8F2] shrink-0">
+                    <div className="w-9 h-9 rounded-xl bg-white flex items-center justify-center text-[#1E90FF] border border-[#DCE8F2] shrink-0">
                       <Clock className="w-4 h-4" />
                     </div>
                     <div>
@@ -177,7 +177,7 @@ export default function ContactPage() {
             <div className="lg:col-span-7">
               <div className="bg-white rounded-3xl p-8 sm:p-10 border border-[#DCE8F2] shadow-elevated">
                 <div className="mb-8">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#019FF9]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[#1E90FF]">
                     Communication Desk
                   </span>
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
@@ -212,7 +212,7 @@ export default function ContactPage() {
                           message: "",
                         });
                       }}
-                      className="px-6 py-2.5 rounded-full bg-[#019FF9] text-white text-xs font-bold hover:bg-[#008ee0] transition-colors"
+                      className="px-6 py-2.5 rounded-full bg-[#1E90FF] text-white text-xs font-bold hover:bg-[#1670C7] transition-colors"
                     >
                       Send Another Message
                     </button>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                             setFormData({ ...formData, name: e.target.value })
                           }
                           placeholder="Your full name"
-                          className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#019FF9]/40 ${
+                          className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/40 ${
                             errors.name ? "border-rose-400" : "border-[#DCE8F2]"
                           }`}
                         />
@@ -251,7 +251,7 @@ export default function ContactPage() {
                             setFormData({ ...formData, phone: e.target.value })
                           }
                           placeholder="+91..."
-                          className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#019FF9]/40 ${
+                          className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/40 ${
                             errors.phone ? "border-rose-400" : "border-[#DCE8F2]"
                           }`}
                         />
@@ -272,7 +272,7 @@ export default function ContactPage() {
                           setFormData({ ...formData, email: e.target.value })
                         }
                         placeholder="you@domain.com"
-                        className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#019FF9]/40 ${
+                        className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/40 ${
                           errors.email ? "border-rose-400" : "border-[#DCE8F2]"
                         }`}
                       />
@@ -290,7 +290,7 @@ export default function ContactPage() {
                         onChange={(e) =>
                           setFormData({ ...formData, subject: e.target.value })
                         }
-                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-[#DCE8F2] text-sm text-slate-900 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#019FF9]/40"
+                        className="w-full px-4 py-2.5 rounded-xl bg-slate-50 border border-[#DCE8F2] text-sm text-slate-900 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/40"
                       >
                         <option value="General Corporate Inquiry">General Corporate Inquiry</option>
                         <option value="Healthcare & Pharmaceuticals">Healthcare &amp; Pharmaceuticals</option>
@@ -313,7 +313,7 @@ export default function ContactPage() {
                           setFormData({ ...formData, message: e.target.value })
                         }
                         placeholder="Describe your enquiry..."
-                        className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#019FF9]/40 resize-none ${
+                        className={`w-full px-4 py-2.5 rounded-xl bg-slate-50 border text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/40 resize-none ${
                           errors.message ? "border-rose-400" : "border-[#DCE8F2]"
                         }`}
                       />
@@ -325,7 +325,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3.5 px-6 rounded-xl bg-[#019FF9] hover:bg-[#008ee0] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2"
+                      className="w-full py-3.5 px-6 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <span>Sending Message...</span>
@@ -346,3 +346,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

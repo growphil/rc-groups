@@ -104,8 +104,8 @@ export function SiteHeader() {
                     href={item.href}
                     className={`px-3.5 py-2 text-sm font-semibold rounded-full transition-all duration-200 ${
                       isActive
-                        ? "text-[#019FF9] bg-[#F0F8FF]"
-                        : "text-[#111827] hover:text-[#019FF9] hover:bg-slate-50"
+                        ? "text-[#1E90FF] bg-[#F5F9FD] font-bold shadow-xs"
+                        : "text-[#0B1528] hover:text-[#00CED1] hover:bg-[#F5F9FD]"
                     }`}
                   >
                     {item.label}
@@ -119,7 +119,7 @@ export function SiteHeader() {
               {/* Get in Touch CTA */}
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#019FF9] hover:bg-[#008ee0] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>Get in Touch</span>
                 <ArrowRight className="w-4 h-4" />
@@ -141,22 +141,24 @@ export function SiteHeader() {
         </div>
       </header>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Slide-Down Navigation Drawer */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden">
-          {/* Backdrop */}
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Mobile navigation"
+          className="fixed inset-0 top-[73px] bg-slate-950/40 backdrop-blur-sm z-40 lg:hidden animate-fade-in"
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-
-          {/* Drawer Sheet */}
-          <div className="fixed top-16 sm:top-[73px] right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
-            <div className="space-y-4">
-              <p className="text-xs font-bold tracking-wider text-slate-400 uppercase">
+            className="bg-white border-b border-[#DCE8F2] shadow-xl px-6 py-8 flex flex-col justify-between max-h-[calc(100dvh-73px)] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="space-y-6">
+              <div className="text-xs font-bold text-slate-400 uppercase tracking-widest px-2">
                 Navigation
-              </p>
-              <div className="space-y-1">
+              </div>
+              <div className="space-y-1.5">
                 {navigationItems.map((item) => {
                   const isActive =
                     item.href === "/"
@@ -170,8 +172,8 @@ export function SiteHeader() {
                       onClick={() => setIsMobileMenuOpen(false)}
                       className={`flex items-center justify-between px-4 py-3.5 min-h-[48px] rounded-xl text-base font-semibold transition-all ${
                         isActive
-                          ? "bg-[#F0F8FF] text-[#019FF9] font-bold border-l-4 border-[#019FF9]"
-                          : "text-slate-800 hover:bg-slate-50 active:bg-slate-100"
+                          ? "bg-[#F5F9FD] text-[#1E90FF] font-bold border-l-4 border-[#1E90FF]"
+                          : "text-slate-800 hover:text-[#00CED1] hover:bg-slate-50 active:bg-slate-100"
                       }`}
                     >
                       <span>{item.label}</span>
@@ -186,7 +188,7 @@ export function SiteHeader() {
               <Link
                 href="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="flex items-center justify-center gap-2 w-full min-h-[48px] py-3.5 px-4 rounded-xl bg-[#019FF9] active:bg-[#0089DB] text-white font-bold text-center shadow-md transition-colors"
+                className="flex items-center justify-center gap-2 w-full min-h-[48px] py-3.5 px-4 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-center shadow-md transition-colors"
               >
                 <span>Get in Touch</span>
                 <ArrowRight className="w-4 h-4" />

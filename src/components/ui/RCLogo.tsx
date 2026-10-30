@@ -39,12 +39,12 @@ export function RCLogo({ className = "", theme = "light", showTagline = true }: 
           >
             RC
           </span>
-          <span className="text-2xl font-extrabold tracking-tight text-[#019FF9]">GROUP</span>
+          <span className="text-2xl font-extrabold tracking-tight text-[#1E90FF]">GROUP</span>
         </div>
         {showTagline && (
           <span
             className={`text-[10px] tracking-[0.2em] font-bold uppercase transition-colors ${
-              isDark ? "text-slate-400 group-hover:text-sky-300" : "text-slate-500 group-hover:text-[#019FF9]"
+              isDark ? "text-slate-400 group-hover:text-[#87CEEB]" : "text-slate-500 group-hover:text-[#1E90FF]"
             }`}
           >
             OF COMPANIES

@@ -79,22 +79,22 @@ export function PartnershipSection() {
 
   const pillars = [
     {
-      icon: <Handshake className="w-5 h-5 text-[#0088EB]" strokeWidth={1.8} />,
+      icon: <Handshake className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
       title: "Strategic Collaboration",
       description: "Partner with us to explore new markets and opportunities.",
     },
     {
-      icon: <TrendingUp className="w-5 h-5 text-[#0088EB]" strokeWidth={1.8} />,
+      icon: <TrendingUp className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
       title: "Shared Growth",
       description: "Combine strengths to create sustainable value.",
     },
     {
-      icon: <Lightbulb className="w-5 h-5 text-[#0088EB]" strokeWidth={1.8} />,
+      icon: <Lightbulb className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
       title: "Innovation Together",
       description: "Work on new ideas and solutions for real-world impact.",
     },
     {
-      icon: <Users className="w-5 h-5 text-[#0088EB]" strokeWidth={1.8} />,
+      icon: <Users className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
       title: "Positive Communities",
       description: "Build stronger communities and a brighter future together.",
     },
@@ -112,8 +112,8 @@ export function PartnershipSection() {
             <div>
               {/* 08 PARTNERSHIP */}
               <div className="flex items-center gap-2.5 mb-3.5">
-                <span className="text-sm font-extrabold text-[#0088EB]">08</span>
-                <span className="text-xs font-bold text-[#0088EB] tracking-[0.2em] uppercase">
+                <span className="text-sm font-extrabold text-[#1E90FF]">08</span>
+                <span className="text-xs font-bold text-[#1E90FF] tracking-[0.2em] uppercase">
                   PARTNERSHIP
                 </span>
               </div>
@@ -121,7 +121,7 @@ export function PartnershipSection() {
               {/* Headline */}
               <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
                 <span className="text-[#0D1829] block">Let’s Build a</span>
-                <span className="text-[#0088EB] block">Stronger Tomorrow</span>
+                <span className="text-[#1E90FF] block">Stronger Tomorrow</span>
               </h2>
 
               {/* Subtitle */}
@@ -135,9 +135,9 @@ export function PartnershipSection() {
                 {pillars.map((pillar, idx) => (
                   <div
                     key={idx}
-                    className="p-4 sm:p-4.5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(0,136,235,0.07)] transition-all flex items-start gap-3"
+                    className="p-4 sm:p-4.5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(30,144,255,0.07)] transition-all flex items-start gap-3"
                   >
-                    <div className="w-10 h-10 rounded-full bg-[#EBF5FF] flex items-center justify-center shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-[#E8F4FE] flex items-center justify-center shrink-0">
                       {pillar.icon}
                     </div>
                     <div>
@@ -172,11 +172,11 @@ export function PartnershipSection() {
             <div className="bg-white rounded-3xl sm:rounded-[32px] p-6 sm:p-8 xl:p-10 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.07)] relative z-10">
               {/* Form Title Area */}
               <div className="mb-6">
-                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0088EB] block mb-1.5">
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#1E90FF] block mb-1.5">
                   PARTNER WITH US
                 </span>
                 <h3 className="text-2xl sm:text-3xl xl:text-4xl font-black text-slate-900 leading-snug tracking-tight">
-                  Get in <span className="text-[#0088EB]">Touch</span>
+                  Get in <span className="text-[#1E90FF]">Touch</span>
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mt-1.5 max-w-xl">
                   Share your details and our team will connect with you to explore partnership opportunities.
@@ -193,7 +193,7 @@ export function PartnershipSection() {
                   </h4>
                   <p className="text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
                     Thank you, <strong className="text-slate-900">{formData.fullName}</strong>. Our partnership desk will reach out to{" "}
-                    <strong className="text-[#0088EB]">{formData.email}</strong> shortly.
+                    <strong className="text-[#1E90FF]">{formData.email}</strong> shortly.
                   </p>
                   <button
                     type="button"
@@ -208,7 +208,7 @@ export function PartnershipSection() {
                         message: "",
                       });
                     }}
-                    className="px-6 py-3 rounded-xl bg-[#0088EB] text-white text-xs sm:text-sm font-semibold hover:bg-[#0077D4] transition-colors shadow-sm"
+                    className="px-6 py-3 rounded-xl bg-[#1E90FF] text-white text-xs sm:text-sm font-semibold hover:bg-[#1670C7] transition-colors shadow-sm"
                   >
                     Send Another Enquiry
                   </button>
@@ -230,7 +230,7 @@ export function PartnershipSection() {
                           setFormData({ ...formData, fullName: e.target.value })
                         }
                         placeholder="Enter your full name"
-                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#0088EB]/30 transition-all min-h-[46px] ${
+                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/30 transition-all min-h-[46px] ${
                           errors.fullName ? "border-rose-400" : "border-slate-200"
                         }`}
                       />
@@ -252,7 +252,7 @@ export function PartnershipSection() {
                           setFormData({ ...formData, organization: e.target.value })
                         }
                         placeholder="Enter your company name"
-                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#0088EB]/30 transition-all min-h-[46px] ${
+                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/30 transition-all min-h-[46px] ${
                           errors.organization ? "border-rose-400" : "border-slate-200"
                         }`}
                       />
@@ -278,7 +278,7 @@ export function PartnershipSection() {
                           setFormData({ ...formData, email: e.target.value })
                         }
                         placeholder="Enter your email address"
-                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#0088EB]/30 transition-all min-h-[46px] ${
+                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/30 transition-all min-h-[46px] ${
                           errors.email ? "border-rose-400" : "border-slate-200"
                         }`}
                       />
@@ -292,7 +292,7 @@ export function PartnershipSection() {
                       <label className="block text-xs sm:text-sm font-semibold text-slate-700 mb-1.5">
                         Phone Number <span className="text-rose-500">*</span>
                       </label>
-                      <div className="flex rounded-xl bg-slate-50/70 border border-slate-200 overflow-hidden focus-within:bg-white focus-within:ring-2 focus-within:ring-[#0088EB]/30 focus-within:border-transparent transition-all min-h-[46px]">
+                      <div className="flex rounded-xl bg-slate-50/70 border border-slate-200 overflow-hidden focus-within:bg-white focus-within:ring-2 focus-within:ring-[#1E90FF]/30 focus-within:border-transparent transition-all min-h-[46px]">
                         <div className="flex items-center gap-1.5 px-3.5 py-2.5 bg-slate-100/60 border-r border-slate-200 text-xs font-medium text-slate-700 shrink-0">
                           <span className="text-base leading-none">🇮🇳</span>
                           <span>+91</span>
@@ -327,7 +327,7 @@ export function PartnershipSection() {
                         onChange={(e) =>
                           setFormData({ ...formData, partnershipType: e.target.value })
                         }
-                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#0088EB]/30 transition-all appearance-none cursor-pointer pr-10 min-h-[46px] ${
+                        className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/30 transition-all appearance-none cursor-pointer pr-10 min-h-[46px] ${
                           errors.partnershipType ? "border-rose-400" : "border-slate-200"
                         }`}
                       >
@@ -359,7 +359,7 @@ export function PartnershipSection() {
                         setFormData({ ...formData, message: e.target.value })
                       }
                       placeholder="Tell us about your business and how you would like to collaborate with us."
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#0088EB]/30 resize-none transition-all ${
+                      className={`w-full px-4 py-3 rounded-xl bg-slate-50/70 border text-base sm:text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:bg-white focus:ring-2 focus:ring-[#1E90FF]/30 resize-none transition-all ${
                         errors.message ? "border-rose-400" : "border-slate-200"
                       }`}
                     />
@@ -372,7 +372,7 @@ export function PartnershipSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-8 rounded-xl sm:rounded-2xl bg-[#0088EB] hover:bg-[#0077D4] text-white font-bold text-sm sm:text-base shadow-[0_6px_20px_rgba(0,136,235,0.35)] hover:shadow-[0_8px_25px_rgba(0,136,235,0.45)] transition-all flex items-center justify-center gap-2 group mt-2"
+                    className="w-full py-4 px-8 rounded-xl sm:rounded-2xl bg-[#1E90FF] hover:bg-[#1670C7] text-white font-bold text-sm sm:text-base shadow-[0_6px_20px_rgba(30,144,255,0.35)] hover:shadow-[0_8px_25px_rgba(30,144,255,0.45)] transition-all flex items-center justify-center gap-2 group mt-2"
                   >
                     <span>{isSubmitting ? "Sending..." : "Send Enquiry"}</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -389,3 +389,4 @@ export function PartnershipSection() {
 }
 
 export default PartnershipSection;
+

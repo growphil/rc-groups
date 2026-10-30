@@ -20,6 +20,7 @@ interface SectorCardItem {
   caption: string;
   image: string;
   icon: LucideIcon;
+  accent?: string;
 }
 
 const topSectors: SectorCardItem[] = [
@@ -30,6 +31,7 @@ const topSectors: SectorCardItem[] = [
     caption: "Pharmaceuticals and medical businesses",
     image: "/images/sector-healthcare.jpg",
     icon: HeartPulse,
+    accent: "#1E90FF",
   },
   {
     id: "02",
@@ -38,6 +40,7 @@ const topSectors: SectorCardItem[] = [
     caption: "Solar, EV and energy solutions",
     image: "/images/solar-panels-tracker.jpg",
     icon: Leaf,
+    accent: "#00CED1",
   },
   {
     id: "03",
@@ -46,6 +49,7 @@ const topSectors: SectorCardItem[] = [
     caption: "Academy and skill development",
     image: "/images/sector-education.jpg",
     icon: GraduationCap,
+    accent: "#1E90FF",
   },
   {
     id: "04",
@@ -54,6 +58,7 @@ const topSectors: SectorCardItem[] = [
     caption: "Food businesses and hospitality",
     image: "/images/sector-food-hospitality.jpg",
     icon: Utensils,
+    accent: "#00CED1",
   },
 ];
 
@@ -65,6 +70,7 @@ const bottomSectors: SectorCardItem[] = [
     caption: "Recreation and event experiences",
     image: "/images/sector-entertainment.jpg",
     icon: Gamepad2,
+    accent: "#1E90FF",
   },
   {
     id: "06",
@@ -73,6 +79,7 @@ const bottomSectors: SectorCardItem[] = [
     caption: "Travel services and experiences",
     image: "/images/sector-travel.jpg",
     icon: Plane,
+    accent: "#00CED1",
   },
   {
     id: "07",
@@ -81,6 +88,7 @@ const bottomSectors: SectorCardItem[] = [
     caption: "Digital businesses and professional services",
     image: "/images/sector-digital.jpg",
     icon: Monitor,
+    accent: "#1E90FF",
   },
 ];
 
@@ -92,11 +100,12 @@ function SectorCard({
   aspectRatio?: string;
 }) {
   const IconComponent = sector.icon;
+  const isTurquoiseAccent = sector.accent === "#00CED1";
 
   return (
     <Link
       href={`/businesses/${sector.slug}`}
-      className="group block bg-white rounded-2xl p-3 border border-[#E3EEF8] hover:border-[#019FF9]/60 shadow-[0_4px_20px_-4px_rgba(1,159,249,0.06)] hover:shadow-[0_18px_36px_-8px_rgba(1,159,249,0.20)] hover:-translate-y-1.5 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#019FF9] focus-visible:outline-none"
+      className="group block bg-white rounded-2xl p-3 border border-[#DCE8F2] hover:border-[#1E90FF]/60 shadow-[0_4px_20px_-4px_rgba(30,144,255,0.06)] hover:shadow-[0_18px_36px_-8px_rgba(30,144,255,0.20)] hover:-translate-y-1.5 transition-all duration-300 focus-visible:ring-2 focus-visible:ring-[#1E90FF] focus-visible:outline-none"
     >
       {/* Landscape Image Container */}
       <div
@@ -111,7 +120,7 @@ function SectorCard({
         />
 
         {/* Floating Frosted Sector Badge */}
-        <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-slate-900/60 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-bold tracking-wider uppercase">
+        <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-[#071426]/75 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-bold tracking-wider uppercase">
           Sector {sector.id}
         </div>
 
@@ -122,25 +131,35 @@ function SectorCard({
       {/* Info Section */}
       <div className="flex items-center gap-3 px-1 py-1">
         {/* Rounded square icon badge */}
-        <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-[#EBF6FF] flex items-center justify-center shrink-0 group-hover:bg-[#019FF9]/15 transition-colors">
-          <IconComponent className="w-5 h-5 text-[#019FF9]" strokeWidth={2} />
+        <div
+          className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center shrink-0 transition-colors ${
+            isTurquoiseAccent
+              ? "bg-[#E6FAF9] text-[#00CED1] group-hover:bg-[#00CED1]/20"
+              : "bg-[#E8F4FE] text-[#1E90FF] group-hover:bg-[#1E90FF]/15"
+          }`}
+        >
+          <IconComponent className="w-5 h-5" strokeWidth={2} />
         </div>
 
         {/* Text information */}
         <div className="flex-1 min-w-0">
-          <span className="block text-xs font-bold text-[#019FF9] leading-tight">
+          <span
+            className={`block text-xs font-bold leading-tight ${
+              isTurquoiseAccent ? "text-[#00CED1]" : "text-[#1E90FF]"
+            }`}
+          >
             {sector.id}
           </span>
-          <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#019FF9] transition-colors truncate">
+          <h3 className="text-sm sm:text-base font-bold text-[#071426] group-hover:text-[#1E90FF] transition-colors truncate">
             {sector.name}
           </h3>
-          <p className="text-[11px] sm:text-xs text-slate-500 truncate leading-snug">
+          <p className="text-[11px] sm:text-xs text-[#475569] truncate leading-snug">
             {sector.caption}
           </p>
         </div>
 
         {/* Circular Action Arrow */}
-        <div className="w-8 h-8 rounded-full bg-[#EBF6FF] text-[#019FF9] group-hover:bg-[#019FF9] group-hover:text-white transition-all flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110">
+        <div className="w-8 h-8 rounded-full bg-[#E8F4FE] text-[#1E90FF] group-hover:bg-[#1E90FF] group-hover:text-white transition-all flex items-center justify-center shrink-0 shadow-xs group-hover:scale-110">
           <ArrowRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" />
         </div>
       </div>
@@ -150,13 +169,13 @@ function SectorCard({
 
 export function BusinessPortfolio() {
   return (
-    <section id="businesses" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-[#F3F9FE] via-[#F8FBFE] to-white relative overflow-hidden">
+    <section id="businesses" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-b from-[#F5F9FD] via-[#F8FBFE] to-white relative overflow-hidden">
       {/* Decorative background watermark and glows */}
       <div className="absolute inset-0 pointer-events-none select-none">
-        <div className="absolute -top-32 right-1/4 w-[500px] h-[500px] bg-sky-200/25 rounded-full blur-3xl" />
-        <div className="absolute -bottom-32 left-10 w-[600px] h-[600px] bg-blue-100/30 rounded-full blur-3xl" />
+        <div className="absolute -top-32 right-1/4 w-[500px] h-[500px] bg-[#87CEEB]/15 rounded-full blur-3xl" />
+        <div className="absolute -bottom-32 left-10 w-[600px] h-[600px] bg-[#1E90FF]/10 rounded-full blur-3xl" />
         {/* Subtle decorative curved background typography */}
-        <div className="absolute -top-10 right-8 text-[180px] sm:text-[220px] font-black tracking-tighter text-[#019FF9]/[0.025] leading-none select-none pointer-events-none">
+        <div className="absolute -top-10 right-8 text-[180px] sm:text-[220px] font-black tracking-tighter text-[#1E90FF]/[0.025] leading-none select-none pointer-events-none">
           RC
         </div>
       </div>
@@ -165,16 +184,16 @@ export function BusinessPortfolio() {
         {/* Top Tag Indicators */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2.5">
-            <span className="text-[#019FF9] font-bold text-sm tracking-wide">
+            <span className="text-[#1E90FF] font-bold text-sm tracking-wide">
               03
             </span>
-            <span className="text-[#019FF9] font-bold text-xs uppercase tracking-widest">
+            <span className="text-[#1E90FF] font-bold text-xs uppercase tracking-widest">
               Our Businesses
             </span>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <span className="text-slate-400 font-semibold text-xs uppercase tracking-wider">
+            <span className="text-[#475569] font-semibold text-xs uppercase tracking-wider">
               Diverse Industries &bull; Stronger Together
             </span>
           </div>
@@ -183,10 +202,10 @@ export function BusinessPortfolio() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-[1.15]">
-              Our <span className="text-[#019FF9]">Business Portfolio</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071426] tracking-tight leading-[1.15]">
+              Our <span className="text-[#1E90FF]">Business Portfolio</span>
             </h2>
-            <p className="mt-3 text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base lg:text-lg text-[#475569] leading-relaxed">
               Seven diverse business sectors working together to create value,
               opportunities and a brighter tomorrow.
             </p>
@@ -195,7 +214,7 @@ export function BusinessPortfolio() {
           <div className="shrink-0">
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#019FF9] hover:bg-[#008fe0] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200 group"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200 group"
             >
               <span>Explore All Businesses</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

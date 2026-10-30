@@ -176,7 +176,7 @@ export function HomeHero() {
         />
 
         <div className="relative z-10 max-w-[860px] mx-auto sm:mx-0 sm:ml-12 lg:ml-20 px-6">
-          <div className="inline-block text-[#019FF9] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-3.5 sm:mb-4">
+          <div className="inline-block text-[#00BFFF] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-3.5 sm:mb-4">
             RC GROUP OF COMPANIES
           </div>
 
@@ -192,7 +192,7 @@ export function HomeHero() {
           <div className="flex flex-wrap items-center gap-4 mt-8">
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#019FF9] hover:bg-[#0089DB] text-white text-[0.95rem] font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 group"
+              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-[0.95rem] font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 group"
             >
               <span>Explore Our Businesses</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -200,7 +200,7 @@ export function HomeHero() {
 
             <Link
               href="/journey"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#10263D]/50 hover:bg-[#10263D]/75 text-white text-[0.95rem] font-semibold border border-[rgba(248,250,252,0.55)] hover:border-white backdrop-blur-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#071426]/50 hover:bg-[#071426]/75 text-white text-[0.95rem] font-semibold border border-[rgba(248,250,252,0.55)] hover:border-white backdrop-blur-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Discover Our Journey</span>
             </Link>
@@ -259,7 +259,7 @@ export function HomeHero() {
           }}
         >
           {/* Eyebrow Text */}
-          <div className="inline-block text-[#019FF9] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-3 sm:mb-4">
+          <div className="inline-block text-[#00BFFF] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-3 sm:mb-4">
             RC GROUP OF COMPANIES
           </div>
 
@@ -279,7 +279,7 @@ export function HomeHero() {
             {/* Primary CTA */}
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#019FF9] hover:bg-[#0089DB] text-white text-[0.95rem] font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 group"
+              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-[0.95rem] font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 group"
             >
               <span>Explore Our Businesses</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -288,7 +288,7 @@ export function HomeHero() {
             {/* Secondary CTA */}
             <Link
               href="/journey"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#10263D]/45 hover:bg-[#10263D]/70 text-white text-[0.95rem] font-semibold border border-[rgba(248,250,252,0.55)] hover:border-white backdrop-blur-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#071426]/50 hover:bg-[#071426]/75 text-white text-[0.95rem] font-semibold border border-[rgba(248,250,252,0.55)] hover:border-white backdrop-blur-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Discover Our Journey</span>
             </Link>
@@ -308,10 +308,10 @@ export function HomeHero() {
           >
             <div className="flex items-center gap-2.5 text-xs font-semibold text-[#E2E8F0]">
               <div className="w-4 h-7 rounded-full border border-slate-300/60 flex items-start justify-center p-1">
-                <span className="w-1 h-1.5 bg-[#019FF9] rounded-full animate-bounce" />
+                <span className="w-1 h-1.5 bg-[#00BFFF] rounded-full animate-bounce" />
               </div>
               <span>Scroll to explore</span>
-              <ChevronDown className="w-3.5 h-3.5 text-[#019FF9]" />
+              <ChevronDown className="w-3.5 h-3.5 text-[#00BFFF]" />
             </div>
           </div>
 
@@ -330,7 +330,7 @@ export function HomeHero() {
                   display: "none",
                 }}
               >
-                <div className="inline-block text-[#019FF9] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-1.5 sm:mb-2.5 whitespace-nowrap">
+                <div className="inline-block text-[#00BFFF] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-1.5 sm:mb-2.5 whitespace-nowrap">
                   {item.eyebrow}
                 </div>
                 <h2 className="text-[clamp(1.15rem,3.6vw,90px)] font-black text-[#F8FAFC] tracking-[-0.035em] leading-none whitespace-nowrap">

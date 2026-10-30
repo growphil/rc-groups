@@ -65,14 +65,14 @@ export function FeaturedVentures() {
           {/* Left: Section Tag & Main Headline */}
           <div className="shrink-0">
             <div className="flex items-center gap-2 mb-3">
-              <span className="text-xs sm:text-sm font-bold text-[#0088EB]">05</span>
-              <span className="text-[11px] sm:text-xs font-bold text-[#0088EB] tracking-[0.18em] uppercase">
+              <span className="text-xs sm:text-sm font-bold text-[#1E90FF]">05</span>
+              <span className="text-[11px] sm:text-xs font-bold text-[#1E90FF] tracking-[0.18em] uppercase">
                 FEATURED VENTURES
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
               <span className="text-[#0D1829] block">Businesses Turning</span>
-              <span className="text-[#0088EB] block">Purpose Into Progress</span>
+              <span className="text-[#1E90FF] block">Purpose Into Progress</span>
             </h2>
           </div>
 
@@ -87,7 +87,7 @@ export function FeaturedVentures() {
           <div className="shrink-0">
             <Link
               href="/businesses"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#0088EB] hover:bg-[#0077D4] text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all group"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all group"
             >
               <span>View All Businesses</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -101,7 +101,7 @@ export function FeaturedVentures() {
 
           {/* 1. Healthcare: RC Pharmaceuticals (col-span-4) */}
           <div
-            className={`lg:col-span-4 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-4 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(0)}
           >
             <div className="relative w-full h-44 sm:h-48 overflow-hidden bg-slate-50">
@@ -113,7 +113,7 @@ export function FeaturedVentures() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 priority
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 HEALTHCARE
               </div>
             </div>
@@ -133,7 +133,7 @@ export function FeaturedVentures() {
 
                 {/* Text Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                     RC Pharmaceuticals
                   </h3>
                   <p className="mt-1.5 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -145,7 +145,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/healthcare"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -156,7 +156,7 @@ export function FeaturedVentures() {
 
           {/* 2. Energy: Kyra Green Energy Solutions & RC Solars (col-span-3) */}
           <div
-            className={`lg:col-span-3 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-3 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(1)}
           >
             <div className="relative w-full h-36 sm:h-40 overflow-hidden bg-slate-50">
@@ -167,7 +167,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 30vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#00CED1] tracking-wider uppercase shadow-xs z-10">
                 ENERGY
               </div>
             </div>
@@ -193,7 +193,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Kyra Green Energy Solutions & RC Solars
                 </h3>
                 <p className="mt-1.5 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -204,7 +204,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/energy"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -215,7 +215,7 @@ export function FeaturedVentures() {
 
           {/* 3. Education: RC Academy & Skilltalento (col-span-3) */}
           <div
-            className={`lg:col-span-3 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-3 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(2)}
           >
             <div className="relative w-full h-36 sm:h-40 overflow-hidden bg-slate-50">
@@ -226,7 +226,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 30vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 EDUCATION
               </div>
             </div>
@@ -252,7 +252,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   RC Academy & Skilltalento
                 </h3>
                 <p className="mt-1.5 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -263,7 +263,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/education"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -276,7 +276,7 @@ export function FeaturedVentures() {
 
           {/* 4. Food: Kyra Food Street (col-span-2) */}
           <div
-            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(3)}
           >
             <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-slate-50">
@@ -287,7 +287,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 FOOD
               </div>
             </div>
@@ -305,7 +305,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Kyra Food Street
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -316,7 +316,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/food-hospitality"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -327,7 +327,7 @@ export function FeaturedVentures() {
 
           {/* 5. Food: RC Rice Mandi (col-span-2) */}
           <div
-            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(4)}
           >
             <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-slate-50">
@@ -338,14 +338,14 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 FOOD
               </div>
             </div>
 
             <div className="p-4 flex flex-col justify-between flex-1">
               <div>
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   RC Rice Mandi
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -356,7 +356,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/food-hospitality"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -367,7 +367,7 @@ export function FeaturedVentures() {
 
           {/* 6. Entertainment: Flyout Trampoline & Kyra Party Hall (col-span-2) */}
           <div
-            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(5)}
           >
             <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-slate-50">
@@ -378,7 +378,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 ENTERTAINMENT
               </div>
             </div>
@@ -396,7 +396,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Flyout Trampoline & Kyra Party Hall
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -407,7 +407,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/entertainment"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -418,7 +418,7 @@ export function FeaturedVentures() {
 
           {/* 7. Travel: Affo Holidays (col-span-2) */}
           <div
-            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(6)}
           >
             <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-slate-50">
@@ -429,7 +429,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 TRAVEL
               </div>
             </div>
@@ -447,7 +447,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Affo Holidays
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -458,7 +458,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/travel"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
@@ -469,7 +469,7 @@ export function FeaturedVentures() {
 
           {/* 8. Digital & Services: Medingen & GrowPhil (col-span-2) */}
           <div
-            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(0,136,235,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
+            className={`lg:col-span-2 bg-white rounded-2xl border border-slate-100/90 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-[0_12px_28px_rgba(30,144,255,0.09)] transition-all duration-300 flex flex-col justify-between overflow-hidden group ${getCardAnimClass()}`}
             style={getCardAnimStyle(7)}
           >
             <div className="relative w-full h-32 sm:h-36 overflow-hidden bg-slate-50">
@@ -480,7 +480,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#0088EB] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#00CED1] tracking-wider uppercase shadow-xs z-10">
                 DIGITAL &amp; SERVICES
               </div>
             </div>
@@ -506,7 +506,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#0088EB] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Medingen & GrowPhil
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -517,7 +517,7 @@ export function FeaturedVentures() {
               <div className="pt-4 mt-auto">
                 <Link
                   href="/businesses/digital-services"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#0088EB] group-hover:text-[#0070c0] transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors"
                 >
                   <span>Explore Venture</span>
                   <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />

@@ -15,16 +15,16 @@ export default function JourneyPage() {
   return (
     <div className="pt-24 pb-20">
       {/* Hero Banner */}
-      <section className="py-20 bg-gradient-to-b from-[#F0F8FF] to-white border-b border-[#DCE8F2]">
+      <section className="py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#019FF9] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-4">
               Two Decades of Impact
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
-              A Journey of <span className="text-[#019FF9]">Purpose &amp; Progress</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#071426] tracking-tight leading-[1.1]">
+              A Journey of <span className="text-[#1E90FF]">Purpose &amp; Progress</span>
             </h1>
-            <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-6 text-lg text-[#475569] leading-relaxed">
               Explore the key chronological milestones that have shaped RC Group of
               Companies from 2004 to the present day. Each step represents our
               dedication to community need, ethical governance, and sustainable innovation.
@@ -48,18 +48,18 @@ export default function JourneyPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent" />
               <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4 text-white">
                 <div>
-                  <span className="px-3 py-1 rounded-full bg-[#019FF9] text-xs font-bold">
+                  <span className="px-3 py-1 rounded-full bg-[#1E90FF] text-xs font-bold">
                     Chronological Heritage
                   </span>
                   <h3 className="text-2xl font-bold mt-2">2004 — 2026 &amp; Beyond</h3>
                 </div>
                 <div className="flex gap-6 text-xs sm:text-sm font-semibold">
                   <div>
-                    <span className="text-xl font-bold text-[#019FF9] block">16+</span>
+                    <span className="text-xl font-bold text-[#00BFFF] block">16+</span>
                     <span>Active Ventures</span>
                   </div>
                   <div>
-                    <span className="text-xl font-bold text-[#019FF9] block">7</span>
+                    <span className="text-xl font-bold text-[#00CED1] block">7</span>
                     <span>Industry Sectors</span>
                   </div>
                 </div>
@@ -70,25 +70,25 @@ export default function JourneyPage() {
       </section>
 
       {/* Complete Vertical Timeline */}
-      <section className="py-20 bg-[#F0F8FF]/40">
+      <section className="py-20 bg-[#F5F9FD]/40">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative border-l-2 border-[#019FF9]/30 ml-4 sm:ml-32 space-y-12">
+          <div className="relative border-l-2 border-[#1E90FF]/30 ml-4 sm:ml-32 space-y-12">
             {journeyMilestones.map((milestone, idx) => (
               <div key={milestone.year} className="relative pl-6 sm:pl-10">
                 {/* Year Badge on left for desktop */}
                 <div className="sm:absolute sm:-left-32 sm:top-1 text-left sm:text-right w-24 mb-2 sm:mb-0">
-                  <span className="inline-block px-3 py-1 rounded-full bg-[#019FF9] text-white text-xs font-black shadow-sm">
+                  <span className="inline-block px-3 py-1 rounded-full bg-[#1E90FF] text-white text-xs font-black shadow-sm">
                     {milestone.year}
                   </span>
                 </div>
 
                 {/* Timeline Node Bullet */}
-                <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-[#019FF9] shadow-sm" />
+                <div className="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-[#1E90FF] shadow-sm" />
 
                 {/* Milestone Content Card */}
-                <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#DCE8F2] hover:border-[#019FF9] shadow-card hover:shadow-elevated transition-all group">
+                <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#DCE8F2] hover:border-[#1E90FF] shadow-card hover:shadow-elevated transition-all group">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span className="text-xs font-bold text-[#019FF9] uppercase tracking-wider">
+                    <span className="text-xs font-bold text-[#1E90FF] uppercase tracking-wider">
                       {milestone.sectorName}
                     </span>
                     <span className="text-xs text-slate-500 font-medium">
@@ -96,15 +96,15 @@ export default function JourneyPage() {
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#019FF9] transition-colors mb-1">
+                  <h3 className="text-xl font-bold text-[#071426] group-hover:text-[#1E90FF] transition-colors mb-1">
                     {milestone.title}
                   </h3>
 
-                  <p className="text-xs font-semibold text-slate-500 mb-3">
+                  <p className="text-xs font-semibold text-[#475569] mb-3">
                     {milestone.subtitle}
                   </p>
 
-                  <p className="text-sm text-slate-600 leading-relaxed mb-4">
+                  <p className="text-sm text-[#475569] leading-relaxed mb-4">
                     {milestone.description}
                   </p>
 
@@ -114,7 +114,7 @@ export default function JourneyPage() {
                     {milestone.ventures.map((v) => (
                       <span
                         key={v}
-                        className="px-2.5 py-0.5 rounded-full bg-[#F0F8FF] text-[#019FF9] text-xs font-semibold border border-[#DCE8F2]"
+                        className="px-2.5 py-0.5 rounded-full bg-[#F5F9FD] text-[#1E90FF] text-xs font-semibold border border-[#DCE8F2]"
                       >
                         {v}
                       </span>
@@ -128,7 +128,7 @@ export default function JourneyPage() {
           <div className="mt-16 text-center">
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#019FF9] hover:bg-[#008ee0] text-white font-bold text-sm shadow-md transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-md transition-all"
             >
               <span>Explore Businesses Resulting From This Journey</span>
               <ArrowRight className="w-4 h-4" />
