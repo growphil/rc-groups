@@ -217,7 +217,7 @@ export function HomeHero() {
       className="relative w-full h-[400vh] bg-[#10263D] text-white"
     >
       {/* Pinned Sticky Stage: 100vh Full-Width Cinematic Viewport */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-between overflow-hidden select-none">
+      <div className="sticky top-0 h-screen h-[100dvh] w-full flex flex-col justify-between overflow-hidden select-none">
         {/* Layer A — Cinematic 480-Frame Image Sequence */}
         <HeroImageSequence ref={heroSequenceRef} />
 

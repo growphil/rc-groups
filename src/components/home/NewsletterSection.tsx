@@ -44,24 +44,26 @@ export function NewsletterSection() {
                 <span>Thank you! You are subscribed to RC Group updates.</span>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="space-y-2">
-                <div className="flex items-center gap-2 p-1.5 rounded-full bg-white border border-[#DCE8F2] shadow-sm focus-within:ring-2 focus-within:ring-[#019FF9]/40 focus-within:border-[#019FF9]">
+              <form onSubmit={handleSubscribe} className="space-y-3">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-1.5 sm:p-2 rounded-2xl sm:rounded-full bg-white border border-[#DCE8F2] shadow-sm focus-within:ring-2 focus-within:ring-[#019FF9]/40 focus-within:border-[#019FF9]">
                   <input
                     type="email"
+                    inputMode="email"
+                    autoComplete="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="Enter your corporate email address..."
-                    className="w-full px-4 py-2 text-sm text-slate-900 bg-transparent placeholder:text-slate-400 focus:outline-none"
+                    className="w-full px-4 py-3 sm:py-2 text-base sm:text-sm text-slate-900 bg-transparent placeholder:text-slate-400 focus:outline-none min-h-[44px]"
                   />
                   <button
                     type="submit"
-                    className="shrink-0 px-6 py-2.5 rounded-full bg-[#019FF9] hover:bg-[#008ee0] text-white text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-1.5"
+                    className="shrink-0 px-6 py-3 sm:py-2.5 rounded-xl sm:rounded-full bg-[#019FF9] hover:bg-[#008ee0] active:bg-[#0080ca] text-white text-sm font-bold transition-all shadow-sm flex items-center justify-center gap-2 min-h-[44px]"
                   >
                     <span>Subscribe</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
+                    <ArrowRight className="w-4 h-4" />
                   </button>
                 </div>
-                {error && <p className="text-rose-500 text-xs px-4">{error}</p>}
+                {error && <p className="text-rose-500 text-xs px-2 sm:px-4">{error}</p>}
               </form>
             )}
           </div>

@@ -121,7 +121,7 @@ export function FeaturedVentures() {
             <div className="p-4 sm:p-5 flex flex-col justify-between flex-1">
               <div className="flex items-start gap-4">
                 {/* Logo Box from public/images/Logo/ */}
-                <div className="shrink-0 w-20 h-20 rounded-xl bg-white border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex items-center justify-center p-2">
+                <div className="shrink-0 w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-white border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.03)] flex items-center justify-center p-2">
                   <Image
                     src="/images/Logo/RC Pharmaceuticals.webp"
                     alt="RC Pharmaceuticals Logo"

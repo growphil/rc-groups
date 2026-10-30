@@ -131,7 +131,7 @@ export function SiteHeader() {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="w-10 h-10 rounded-full flex items-center justify-center text-slate-800 hover:bg-slate-100 border border-[#DCE8F2]"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center text-slate-800 hover:bg-slate-100 active:bg-slate-200 border border-[#DCE8F2] transition-colors"
                 aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               >
                 {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -146,12 +146,12 @@ export function SiteHeader() {
         <div className="fixed inset-0 z-40 lg:hidden">
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/40 backdrop-blur-sm"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm transition-opacity"
             onClick={() => setIsMobileMenuOpen(false)}
           />
 
           {/* Drawer Sheet */}
-          <div className="fixed top-[73px] right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
+          <div className="fixed top-16 sm:top-[73px] right-0 bottom-0 w-full max-w-sm bg-white shadow-2xl p-6 flex flex-col justify-between overflow-y-auto">
             <div className="space-y-4">
               <p className="text-xs font-bold tracking-wider text-slate-400 uppercase">
                 Navigation
@@ -167,10 +167,11 @@ export function SiteHeader() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className={`flex items-center justify-between px-4 py-3 rounded-xl text-base font-semibold transition-colors ${
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className={`flex items-center justify-between px-4 py-3.5 min-h-[48px] rounded-xl text-base font-semibold transition-all ${
                         isActive
-                          ? "bg-[#F0F8FF] text-[#019FF9] font-bold"
-                          : "text-slate-800 hover:bg-slate-50"
+                          ? "bg-[#F0F8FF] text-[#019FF9] font-bold border-l-4 border-[#019FF9]"
+                          : "text-slate-800 hover:bg-slate-50 active:bg-slate-100"
                       }`}
                     >
                       <span>{item.label}</span>
@@ -184,7 +185,8 @@ export function SiteHeader() {
             <div className="pt-6 border-t border-slate-100 space-y-4">
               <Link
                 href="/contact"
-                className="flex items-center justify-center gap-2 w-full py-3.5 px-4 rounded-xl bg-[#019FF9] text-white font-bold text-center shadow-md"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center justify-center gap-2 w-full min-h-[48px] py-3.5 px-4 rounded-xl bg-[#019FF9] active:bg-[#0089DB] text-white font-bold text-center shadow-md transition-colors"
               >
                 <span>Get in Touch</span>
                 <ArrowRight className="w-4 h-4" />

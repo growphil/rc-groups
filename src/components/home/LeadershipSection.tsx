@@ -189,7 +189,7 @@ export function LeadershipSection() {
               </div>
 
               {/* Lower Area: White Profile Information Panel Overlapping Portrait */}
-              <div className="relative z-20 -mt-7 bg-white rounded-t-[26px] p-6 sm:p-7 shadow-[0_-4px_20px_rgba(0,0,0,0.02)] flex flex-col justify-between flex-1">
+              <div className="relative z-20 -mt-7 bg-white rounded-t-[26px] p-5 sm:p-7 shadow-[0_-4px_20px_rgba(0,0,0,0.02)] flex flex-col justify-between flex-1">
                 <div>
                   {/* Short Blue Accent Line */}
                   <div className="w-8 h-1 bg-[#019FF9] rounded-full mb-3.5" />

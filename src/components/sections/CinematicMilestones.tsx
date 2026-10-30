@@ -446,7 +446,7 @@ export function CinematicMilestones() {
       className="relative w-full h-[400vh] bg-[#07111e] text-white"
     >
       {/* Pinned Sticky Viewport: 100vh Full-Width Pure Cinematic Stage */}
-      <div className="sticky top-0 h-screen w-full flex flex-col justify-between overflow-hidden select-none">
+      <div className="sticky top-0 h-screen h-[100dvh] w-full flex flex-col justify-between overflow-hidden select-none">
         {/* Instant Fallback Poster (eliminates any initialization blink) */}
         <div
           className={`absolute inset-0 w-full h-full bg-cover bg-center pointer-events-none transition-opacity duration-700 ${

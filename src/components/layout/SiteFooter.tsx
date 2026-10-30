@@ -46,52 +46,52 @@ export function SiteFooter() {
               hospitality, active entertainment, travel, and digital services.
             </p>
 
-            {/* Social Channels */}
-            <div className="flex items-center gap-3 pt-2">
+            {/* Social Channels - 44px mobile touch targets */}
+            <div className="flex flex-wrap items-center gap-2.5 pt-2">
               <a
                 href={contactDetails.socials.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#019FF9] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-colors"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-800/80 hover:bg-[#019FF9] active:bg-[#0089DB] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-all hover:scale-105"
                 aria-label="LinkedIn"
               >
-                <LinkedInIcon className="w-4 h-4" />
+                <LinkedInIcon className="w-5 h-5" />
               </a>
               <a
                 href={contactDetails.socials.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#019FF9] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-colors"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-800/80 hover:bg-[#019FF9] active:bg-[#0089DB] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-all hover:scale-105"
                 aria-label="Twitter"
               >
-                <TwitterIcon className="w-4 h-4" />
+                <TwitterIcon className="w-5 h-5" />
               </a>
               <a
                 href={contactDetails.socials.instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#019FF9] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-colors"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-800/80 hover:bg-[#019FF9] active:bg-[#0089DB] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-all hover:scale-105"
                 aria-label="Instagram"
               >
-                <InstagramIcon className="w-4 h-4" />
+                <InstagramIcon className="w-5 h-5" />
               </a>
               <a
                 href={contactDetails.socials.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#019FF9] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-colors"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-800/80 hover:bg-[#019FF9] active:bg-[#0089DB] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-all hover:scale-105"
                 aria-label="YouTube"
               >
-                <YouTubeIcon className="w-4 h-4" />
+                <YouTubeIcon className="w-5 h-5" />
               </a>
               <a
                 href={contactDetails.socials.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-[#019FF9] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-colors"
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full bg-slate-800/80 hover:bg-[#019FF9] active:bg-[#0089DB] text-slate-300 hover:text-white flex items-center justify-center border border-slate-700/60 transition-all hover:scale-105"
                 aria-label="Facebook"
               >
-                <FacebookIcon className="w-4 h-4" />
+                <FacebookIcon className="w-5 h-5" />
               </a>
             </div>
           </div>
