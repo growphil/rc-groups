@@ -10,7 +10,7 @@ import { Menu, X, ArrowRight } from "lucide-react";
 export function SiteHeader() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isHeaderVisible, setIsHeaderVisible] = useState(pathname !== "/");
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -21,21 +21,7 @@ export function SiteHeader() {
 
       rafId = requestAnimationFrame(() => {
         rafId = null;
-
-        // On homepage, hide header during hero section; show on next sections
-        if (pathname === "/") {
-          const heroEl = document.getElementById("hero");
-          if (heroEl) {
-            const rect = heroEl.getBoundingClientRect();
-            // Header appears when user scrolls out of hero into the next section
-            const inHero = rect.bottom > 60;
-            setIsHeaderVisible(!inHero);
-          } else {
-            setIsHeaderVisible(true);
-          }
-        } else {
-          setIsHeaderVisible(true);
-        }
+        setIsHeaderVisible(true);
 
         if (window.scrollY > 20) {
           setIsScrolled(true);

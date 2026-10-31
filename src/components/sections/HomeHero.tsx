@@ -1,344 +1,138 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import {
-  HeroImageSequence,
-  HeroImageSequenceHandle,
-} from "@/components/animation/HeroImageSequence";
-
-const BOTTOM_TITLES = [
-  {
-    eyebrow: "OUR BUSINESS ECOSYSTEM",
-    title: "Seven Sectors. One Shared Vision.",
-    start: 0.22,
-    peakStart: 0.28,
-    peakEnd: 0.44,
-    end: 0.48,
-  },
-  {
-    eyebrow: "OUR GUIDING PHILOSOPHY",
-    title: "Driven by Purpose. Focused on People.",
-    start: 0.48,
-    peakStart: 0.54,
-    peakEnd: 0.70,
-    end: 0.74,
-  },
-  {
-    eyebrow: "OUR FUTURE COMMITMENT",
-    title: "Turning Purpose Into Progress.",
-    start: 0.74,
-    peakStart: 0.80,
-    peakEnd: 0.98,
-    end: 1.0,
-  },
-];
 
 export function HomeHero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const heroSequenceRef = useRef<HeroImageSequenceHandle>(null);
+  const scrollToNext = () => {
+    const nextSection = document.getElementById("about") || document.querySelector("section:nth-of-type(2)");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  // Direct DOM references for zero React re-render scroll updates
-  const stage1Ref = useRef<HTMLDivElement>(null);
-  const leftGradientRef = useRef<HTMLDivElement>(null);
-  const bottomGradientRef = useRef<HTMLDivElement>(null);
-  const scrollCueRef = useRef<HTMLDivElement>(null);
-  const bottomTitleRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  const [isReducedMotion, setIsReducedMotion] = useState<boolean>(false);
-
-  // Check for prefers-reduced-motion
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setIsReducedMotion(mediaQuery.matches);
-
-    const handler = (e: MediaQueryListEvent) => setIsReducedMotion(e.matches);
-    mediaQuery.addEventListener("change", handler);
-    return () => mediaQuery.removeEventListener("change", handler);
-  }, []);
-
-  // Hot-path scroll listener: updates Canvas & DOM directly without React re-renders
-  useEffect(() => {
-    if (isReducedMotion) return;
-
-    let rafId: number | null = null;
-
-    const updateDOMNodes = (progress: number) => {
-      // 1. Notify Canvas Sequence
-      heroSequenceRef.current?.setScrollProgress(progress);
-
-      // 2. Stage 1: Headline & CTAs
-      const initialCopyProgress = Math.max(0, Math.min(1, (progress - 0.04) / 0.14));
-      const copyOpacity = Math.max(0, 1 - initialCopyProgress);
-      const copyTranslateY = initialCopyProgress * -35;
-      const isCopyInteractive = copyOpacity > 0.05;
-
-      if (stage1Ref.current) {
-        stage1Ref.current.style.opacity = String(copyOpacity);
-        stage1Ref.current.style.transform = `translateY(${copyTranslateY}px)`;
-        stage1Ref.current.style.pointerEvents = isCopyInteractive ? "auto" : "none";
-        stage1Ref.current.style.display = copyOpacity > 0.01 ? "block" : "none";
-      }
-
-      if (leftGradientRef.current) {
-        leftGradientRef.current.style.opacity = copyOpacity > 0.01 ? "1" : "0.3";
-      }
-
-      // 3. Stage 2: Bottom Titles
-      const isAnyBottomTitleActive = progress >= 0.22;
-
-      if (bottomGradientRef.current) {
-        bottomGradientRef.current.style.opacity = isAnyBottomTitleActive ? "1" : "0.7";
-      }
-
-      if (scrollCueRef.current) {
-        const isHidden = progress > 0.06 || isAnyBottomTitleActive;
-        scrollCueRef.current.style.opacity = isHidden ? "0" : "1";
-        scrollCueRef.current.style.display = isHidden ? "none" : "block";
-      }
-
-      BOTTOM_TITLES.forEach((item, idx) => {
-        const titleEl = bottomTitleRefs.current[idx];
-        if (!titleEl) return;
-
-        if (progress < item.start || progress > item.end) {
-          titleEl.style.opacity = "0";
-          titleEl.style.transform = "translateY(20px)";
-          titleEl.style.display = "none";
-          return;
-        }
-
-        let opacity = 1;
-        let translateY = 0;
-
-        if (progress < item.peakStart) {
-          const p = (progress - item.start) / (item.peakStart - item.start);
-          opacity = Math.max(0, Math.min(1, p));
-          translateY = (1 - opacity) * 16;
-        } else if (progress > item.peakEnd && item.end < 1.0) {
-          const p = (progress - item.peakEnd) / (item.end - item.peakEnd);
-          opacity = Math.max(0, Math.min(1, 1 - p));
-          translateY = (1 - opacity) * -16;
-        }
-
-        titleEl.style.opacity = String(opacity);
-        titleEl.style.transform = `translateY(${translateY}px)`;
-        titleEl.style.display = opacity > 0.01 ? "block" : "none";
-      });
-    };
-
-    const onScroll = () => {
-      if (rafId !== null) return;
-
-      rafId = requestAnimationFrame(() => {
-        rafId = null;
-        const container = containerRef.current;
-        if (!container) return;
-
-        const rect = container.getBoundingClientRect();
-        const scrollableDistance = rect.height - window.innerHeight;
-        if (scrollableDistance <= 0) return;
-
-        const currentScrollTop = -rect.top;
-        const progress = Math.max(0, Math.min(1, currentScrollTop / scrollableDistance));
-        updateDOMNodes(progress);
-      });
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    // Initialize initial frame & DOM positioning
-    onScroll();
-
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      if (rafId !== null) {
-        cancelAnimationFrame(rafId);
-      }
-    };
-  }, [isReducedMotion]);
-
-  // Reduced motion alternative: clean static presentation using the completed landscape
-  if (isReducedMotion) {
-    return (
-      <section className="relative w-full min-h-screen flex items-center bg-[#10263D] text-white overflow-hidden pt-28 pb-16">
-        <div
-          className="absolute inset-0 w-full h-full bg-cover bg-center pointer-events-none opacity-90"
-          style={{ backgroundImage: "url('/images/hero-frames/frame_0480.webp')" }}
-        />
-        {/* Left deep navy gradient for text contrast */}
-        <div
-          className="absolute inset-y-0 left-0 w-full sm:w-[860px] pointer-events-none"
-          style={{
-            background:
-              "linear-gradient(to right, rgba(16, 38, 61, 0.85) 0%, rgba(16, 38, 61, 0.40) 50%, rgba(16, 38, 61, 0) 100%)",
-          }}
-        />
-
-        <div className="relative z-10 max-w-[860px] mx-auto sm:mx-0 sm:ml-12 lg:ml-20 px-6">
-          <div className="inline-block text-[#00BFFF] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-3.5 sm:mb-4">
-            RC GROUP OF COMPANIES
-          </div>
-
-          <h1 className="text-[clamp(1.75rem,4.4vw,4.25rem)] font-bold text-[#F8FAFC] tracking-[-0.035em] leading-[1.08]">
-            <span className="block whitespace-nowrap">Building Progress.</span>
-            <span className="block whitespace-nowrap mt-1 sm:mt-1.5">Creating Possibilities.</span>
-          </h1>
-
-          <p className="mt-5 sm:mt-6 text-[clamp(1rem,1.2vw,1.2rem)] text-[#E2E8F0] max-w-[580px] font-normal leading-[1.6]">
-            A growing ecosystem of businesses driven by purpose, innovation and long-term vision.
-          </p>
-
-          <div className="flex flex-wrap items-center gap-4 mt-8">
-            <Link
-              href="/businesses"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-[0.95rem] font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 group"
-            >
-              <span>Explore Our Businesses</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-
-            <Link
-              href="/journey"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#071426]/50 hover:bg-[#071426]/75 text-white text-[0.95rem] font-semibold border border-[rgba(248,250,252,0.55)] hover:border-white backdrop-blur-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
-            >
-              <span>Discover Our Journey</span>
-            </Link>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  const heroMetrics = [
+    { label: "Heritage", value: "20+", suffix: "Years", desc: "Purpose-driven growth since 2004" },
+    { label: "Ecosystem", value: "7", suffix: "Sectors", desc: "Diversified industry verticals" },
+    { label: "Community", value: "1M+", suffix: "Lives", desc: "Touched across India and beyond" },
+    { label: "Enterprise", value: "16+", suffix: "Ventures", desc: "Operating companies & initiatives" },
+  ];
 
   return (
     <section
-      ref={containerRef}
       id="hero"
-      className="relative w-full h-[400vh] bg-[#10263D] text-white"
+      className="relative w-full min-h-[92vh] lg:min-h-screen flex flex-col justify-between bg-[#071426] text-white overflow-hidden pt-28 sm:pt-32 pb-10 sm:pb-14 select-none"
     >
-      {/* Pinned Sticky Stage: 100vh Full-Width Cinematic Viewport */}
-      <div className="sticky top-0 h-screen h-[100dvh] w-full flex flex-col justify-between overflow-hidden select-none">
-        {/* Layer A — Cinematic 480-Frame Image Sequence */}
-        <HeroImageSequence ref={heroSequenceRef} />
+      {/* Background Image: High-Resolution Corporate Sunrise Horizon */}
+      <div className="absolute inset-0 w-full h-full pointer-events-none">
+        <Image
+          src="/images/hero-frames/frame_0480.webp"
+          alt="RC Group Corporate Horizons - Architecture & Clean Energy Landscape"
+          fill
+          priority
+          quality={90}
+          className="object-cover object-center scale-[1.02] transform transition-transform duration-1000 ease-out"
+          sizes="100vw"
+        />
 
-        {/* Ambient Left Navy Gradient: Deep navy (#10263D) contrast without altering natural sunrise on the right */}
+        {/* Cinematic Scrim: Multi-stop Obsidian Navy gradients for flawless text contrast */}
         <div
-          ref={leftGradientRef}
-          className="absolute inset-y-0 left-0 w-full sm:w-[860px] pointer-events-none z-10 transition-opacity duration-300"
+          className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(16, 38, 61, 0.82) 0%, rgba(16, 38, 61, 0.40) 50%, rgba(16, 38, 61, 0) 100%)",
-            opacity: 1,
+              "linear-gradient(to right, rgba(7, 20, 38, 0.94) 0%, rgba(7, 20, 38, 0.82) 42%, rgba(7, 20, 38, 0.45) 75%, rgba(7, 20, 38, 0.25) 100%)",
           }}
         />
 
-        {/* Subtle Top & Bottom Vignettes: Ensures header legibility and clean transition to AboutSection */}
-        <div className="absolute top-0 inset-x-0 h-40 pointer-events-none z-10 bg-gradient-to-b from-[#10263D]/80 via-[#10263D]/25 to-transparent" />
-        <div
-          ref={bottomGradientRef}
-          className="absolute bottom-0 inset-x-0 h-48 sm:h-56 pointer-events-none z-10 transition-opacity duration-300"
-          style={{
-            background:
-              "linear-gradient(to top, rgba(16, 38, 61, 0.92) 0%, rgba(16, 38, 61, 0.55) 60%, rgba(16, 38, 61, 0) 100%)",
-            opacity: 0.7,
-          }}
-        />
+        {/* Top Vignette: Smooth integration with floating header */}
+        <div className="absolute top-0 inset-x-0 h-40 bg-gradient-to-b from-[#071426]/90 via-[#071426]/40 to-transparent" />
 
-        {/* Top spacer for clean breathing room */}
-        <div className="relative z-20 pt-16 sm:pt-20" />
+        {/* Bottom Vignette: Seamless handoff into About Section */}
+        <div className="absolute bottom-0 inset-x-0 h-44 bg-gradient-to-t from-[#071426] via-[#071426]/60 to-transparent" />
+      </div>
 
-        {/* Stage 1: Minimal Hero Copy & CTAs (Left-Aligned, Max 860px) */}
-        <div
-          ref={stage1Ref}
-          className="relative z-20 px-6 sm:px-12 lg:px-20 max-w-[860px] will-change-transform"
-          style={{
-            opacity: 1,
-            transform: "translateY(0px)",
-            pointerEvents: "auto",
-            display: "block",
-          }}
-        >
-          {/* Eyebrow Text */}
-          <div className="inline-block text-[#00BFFF] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-3 sm:mb-4">
-            RC GROUP OF COMPANIES
+      {/* Main Narrative Area */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-8 lg:py-12">
+        <div className="max-w-3xl">
+          {/* Eyebrow Tag */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xs mb-5 sm:mb-6 animate-fade-in">
+            <span className="w-2 h-2 rounded-full bg-[#00BFFF] animate-pulse" />
+            <span className="text-xs sm:text-sm font-extrabold tracking-[0.2em] text-[#00BFFF] uppercase">
+              RC Group of Companies
+            </span>
           </div>
 
-          {/* Main Headline: Warm white #F8FAFC - exactly 2 lines */}
-          <h1 className="text-[clamp(1.75rem,4.4vw,4.25rem)] font-bold text-[#F8FAFC] tracking-[-0.035em] leading-[1.08]">
-            <span className="block whitespace-nowrap">Building Progress.</span>
-            <span className="block whitespace-nowrap mt-1 sm:mt-1.5">Creating Possibilities.</span>
+          {/* Main Display Headline */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-black text-[#F8FAFC] tracking-[-0.035em] leading-[1.08]">
+            <span>Building Progress.</span>
+            <span className="block text-gradient-corporate mt-1 sm:mt-2">
+              Creating Possibilities.
+            </span>
           </h1>
 
-          {/* Supporting Description */}
-          <p className="mt-5 sm:mt-6 text-[clamp(1rem,1.2vw,1.2rem)] text-[#E2E8F0] max-w-[580px] font-normal leading-[1.6]">
-            A growing ecosystem of businesses driven by purpose, innovation and long-term vision.
+          {/* Supporting Lead Description */}
+          <p className="mt-5 sm:mt-6 text-base sm:text-lg lg:text-xl text-slate-200/90 max-w-2xl font-normal leading-relaxed">
+            A growing ecosystem of businesses driven by purpose, innovation, and long-term vision—delivering sustainable impact across Healthcare, Renewable Energy, Education, Hospitality, and Modern Enterprise.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 mt-7 sm:mt-8">
-            {/* Primary CTA */}
+          {/* Interactive CTAs */}
+          <div className="flex flex-wrap items-center gap-3.5 sm:gap-4 mt-8 sm:mt-10">
+            {/* Primary Action Button */}
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-[0.95rem] font-semibold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0 group"
+              className="inline-flex items-center gap-2.5 py-4 px-7 sm:px-8 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm sm:text-base font-bold shadow-[0_8px_25px_rgba(30,144,255,0.4)] hover:shadow-[0_12px_32px_rgba(30,144,255,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
             >
               <span>Explore Our Businesses</span>
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:translate-x-1" />
             </Link>
 
-            {/* Secondary CTA */}
+            {/* Secondary Action Button */}
             <Link
               href="/journey"
-              className="inline-flex items-center gap-2 py-[15px] px-[25px] rounded-full bg-[#071426]/50 hover:bg-[#071426]/75 text-white text-[0.95rem] font-semibold border border-[rgba(248,250,252,0.55)] hover:border-white backdrop-blur-md transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-2.5 py-4 px-7 sm:px-8 rounded-full bg-[#071426]/60 hover:bg-white/15 active:bg-white/10 text-white text-sm sm:text-base font-bold border border-white/25 hover:border-white/50 backdrop-blur-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
             >
               <span>Discover Our Journey</span>
             </Link>
           </div>
         </div>
+      </div>
 
-        {/* Center flex spacer: Keeps the central area open for the 7 business panels */}
-        <div className="flex-1 pointer-events-none" />
-
-        {/* Bottom Dedicated Region: Scroll cue (Stage 1) or 3 Sequential Titles (Stage 2) */}
-        <div className="relative z-20 px-6 sm:px-10 lg:px-12 pb-8 sm:pb-12 max-w-[1720px] w-full pointer-events-none">
-          {/* Scroll Cue for Stage 1 */}
-          <div
-            ref={scrollCueRef}
-            className="transition-opacity duration-300"
-            style={{ opacity: 1, display: "block" }}
-          >
-            <div className="flex items-center gap-2.5 text-xs font-semibold text-[#E2E8F0]">
-              <div className="w-4 h-7 rounded-full border border-slate-300/60 flex items-start justify-center p-1">
-                <span className="w-1 h-1.5 bg-[#00BFFF] rounded-full animate-bounce" />
-              </div>
-              <span>Scroll to explore</span>
-              <ChevronDown className="w-3.5 h-3.5 text-[#00BFFF]" />
-            </div>
-          </div>
-
-          {/* 3 Sequential Titles: Single lines, appearing one by one, no line break, max 90px, screen-fitted */}
-          <div className="relative min-h-[85px] sm:min-h-[110px] lg:min-h-[135px] w-full flex items-end">
-            {BOTTOM_TITLES.map((item, idx) => (
-              <div
-                key={idx}
-                ref={(el) => {
-                  bottomTitleRefs.current[idx] = el;
-                }}
-                className="absolute bottom-0 left-0 w-full will-change-transform"
-                style={{
-                  opacity: 0,
-                  transform: "translateY(20px)",
-                  display: "none",
-                }}
-              >
-                <div className="inline-block text-[#00BFFF] text-xs sm:text-sm font-bold tracking-[0.18em] uppercase mb-1.5 sm:mb-2.5 whitespace-nowrap">
-                  {item.eyebrow}
+      {/* Bottom Floating Bar: 4 Core Pillars Strip + Scroll Cue */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full mt-4">
+        <div className="p-4 sm:p-5 rounded-2xl bg-[#071426]/75 backdrop-blur-md border border-white/15 shadow-card flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6">
+          {/* 4 Pillars Counter Strip */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-6 w-full md:w-auto flex-1 divide-y sm:divide-y-0 sm:divide-x divide-white/10">
+            {heroMetrics.map((item, idx) => (
+              <div key={item.label} className={`flex flex-col ${idx > 0 ? "pt-2 sm:pt-0 sm:pl-6" : ""}`}>
+                <div className="flex items-baseline gap-1.5">
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-black text-white tnum leading-tight">
+                    {item.value}
+                  </span>
+                  <span className="text-xs sm:text-sm font-bold text-[#00BFFF] uppercase tracking-wide">
+                    {item.suffix}
+                  </span>
                 </div>
-                <h2 className="text-[clamp(1.15rem,3.6vw,90px)] font-black text-[#F8FAFC] tracking-[-0.035em] leading-none whitespace-nowrap">
-                  {item.title}
-                </h2>
+                <span className="text-[11px] sm:text-xs text-slate-300/80 font-medium leading-snug mt-0.5">
+                  {item.desc}
+                </span>
               </div>
             ))}
           </div>
+
+          {/* Smooth Scroll Cue */}
+          <button
+            type="button"
+            onClick={scrollToNext}
+            className="hidden lg:flex items-center gap-2.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors group shrink-0 pl-6 border-l border-white/10"
+            aria-label="Scroll to discover RC Group"
+          >
+            <span>Explore</span>
+            <div className="w-8 h-8 rounded-full bg-white/10 group-hover:bg-[#1E90FF] flex items-center justify-center transition-colors">
+              <ChevronDown className="w-4 h-4 text-[#00BFFF] group-hover:text-white transition-colors group-hover:translate-y-0.5" />
+            </div>
+          </button>
         </div>
       </div>
     </section>
