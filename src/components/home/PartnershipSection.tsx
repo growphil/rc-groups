@@ -79,24 +79,36 @@ export function PartnershipSection() {
 
   const pillars = [
     {
-      icon: <Handshake className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
+      num: "01",
+      icon: Handshake,
       title: "Strategic Collaboration",
       description: "Partner with us to explore new markets and opportunities.",
+      badgeBg: "bg-[#1E90FF]/10 text-[#1E90FF] group-hover:bg-[#1E90FF] group-hover:text-white",
+      accent: "#1E90FF",
     },
     {
-      icon: <TrendingUp className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
+      num: "02",
+      icon: TrendingUp,
       title: "Shared Growth",
       description: "Combine strengths to create sustainable value.",
+      badgeBg: "bg-[#00CED1]/10 text-[#00CED1] group-hover:bg-[#00CED1] group-hover:text-white",
+      accent: "#00CED1",
     },
     {
-      icon: <Lightbulb className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
+      num: "03",
+      icon: Lightbulb,
       title: "Innovation Together",
       description: "Work on new ideas and solutions for real-world impact.",
+      badgeBg: "bg-[#1E90FF]/10 text-[#1E90FF] group-hover:bg-[#1E90FF] group-hover:text-white",
+      accent: "#1E90FF",
     },
     {
-      icon: <Users className="w-5 h-5 text-[#1E90FF]" strokeWidth={1.8} />,
+      num: "04",
+      icon: Users,
       title: "Positive Communities",
       description: "Build stronger communities and a brighter future together.",
+      badgeBg: "bg-[#00CED1]/10 text-[#00CED1] group-hover:bg-[#00CED1] group-hover:text-white",
+      accent: "#00CED1",
     },
   ];
 
@@ -132,26 +144,45 @@ export function PartnershipSection() {
                 We collaborate with partners, businesses, and organizations to create new opportunities, drive innovation, and achieve important long-term goals.
               </p>
 
-              {/* 4 Feature Cards (2x2 Grid) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 mt-7">
-                {pillars.map((pillar, idx) => (
-                  <div
-                    key={idx}
-                    className="p-4 sm:p-4.5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_2px_12px_rgba(0,0,0,0.03)] hover:shadow-[0_6px_20px_rgba(30,144,255,0.07)] transition-all flex items-start gap-3"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-[#E8F4FE] flex items-center justify-center shrink-0">
-                      {pillar.icon}
+              {/* 4 Feature Cards (2x2 Grid on mobile and desktop) */}
+              <div className="grid grid-cols-2 gap-2.5 sm:gap-3.5 mt-6 sm:mt-7">
+                {pillars.map((pillar, idx) => {
+                  const Icon = pillar.icon;
+                  return (
+                    <div
+                      key={idx}
+                      className="group relative p-3 sm:p-4 rounded-xl sm:rounded-2xl bg-[#F5F9FD] hover:bg-white border border-[#DCE8F2] hover:border-[#1E90FF]/40 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between hover:-translate-y-0.5 overflow-hidden"
+                    >
+                      {/* Top subtle highlight */}
+                      <div
+                        className="absolute top-0 inset-x-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                        style={{ backgroundColor: pillar.accent }}
+                      />
+
+                      {/* Header: Icon & Numeral */}
+                      <div className="flex items-center justify-between mb-2 sm:mb-2.5">
+                        <div
+                          className={`w-8 h-8 sm:w-9 sm:h-9 rounded-lg sm:rounded-xl flex items-center justify-center transition-all duration-300 shadow-xs ${pillar.badgeBg}`}
+                        >
+                          <Icon className="w-4 h-4 transition-transform duration-300 group-hover:scale-110" />
+                        </div>
+                        <span className="text-[10px] sm:text-xs font-semibold text-slate-400/80 tracking-wider">
+                          {pillar.num}
+                        </span>
+                      </div>
+
+                      {/* Content: Title & Description */}
+                      <div>
+                        <h3 className="text-xs sm:text-sm font-[600] text-[#071426] group-hover:text-[#1E90FF] transition-colors leading-snug mb-1">
+                          {pillar.title}
+                        </h3>
+                        <p className="text-[10px] sm:text-xs text-[#475569] leading-relaxed line-clamp-3 sm:line-clamp-none">
+                          {pillar.description}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="text-xs sm:text-sm font-[550] text-slate-900 leading-snug">
-                        {pillar.title}
-                      </h3>
-                      <p className="text-[11px] text-slate-500 leading-relaxed mt-1 font-normal">
-                        {pillar.description}
-                      </p>
-                    </div>
-                  </div>
-                ))}
+                  );
+                })}
               </div>
             </div>
 
