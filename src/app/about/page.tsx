@@ -226,15 +226,15 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Seven Sectors Quick Grid */}
-      <section className="py-20 bg-[#071426] text-white">
+      {/* Seven Sectors Quick Grid / Portfolio Diversification */}
+      <section className="py-16 sm:py-20 bg-[#071426] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 sm:mb-12 gap-4 sm:gap-6">
             <div>
               <span className="text-xs font-semibold uppercase tracking-wider text-[#00CED1]">
                 Portfolio Diversification
               </span>
-              <h2 className="text-3xl sm:text-4xl font-[650] text-white tracking-tight mt-2">
+              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-[650] text-white tracking-tight mt-1.5 sm:mt-2">
                 Seven Complementary Business Sectors
               </h2>
             </div>
@@ -247,22 +247,30 @@ export default function AboutPage() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {businessSectors.map((sector) => (
+          {/* Mobile responsive grid: 2 columns on mobile, 4 columns on desktop */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-5">
+            {businessSectors.map((sector, index) => (
               <Link
                 key={sector.slug}
                 href={`/businesses/${sector.slug}`}
-                className="p-5 rounded-2xl bg-slate-800/60 border border-slate-700 hover:border-[#1E90FF] transition-all group"
+                className={`p-4 sm:p-5 rounded-2xl bg-slate-800/60 hover:bg-slate-800 border border-slate-700/80 hover:border-[#1E90FF]/60 shadow-xs hover:shadow-lg transition-all duration-300 group flex flex-col justify-between hover:-translate-y-1 ${
+                  index === 6 ? "col-span-2 sm:col-span-1" : ""
+                }`}
               >
-                <span className="text-xs font-bold text-[#00CED1] px-2 py-0.5 rounded bg-[#00CED1]/20">
-                  {sector.id}
-                </span>
-                <h4 className="text-base font-bold text-white mt-3 mb-1 group-hover:text-[#1E90FF] transition-colors">
-                  {sector.name}
-                </h4>
-                <p className="text-xs text-slate-400 line-clamp-2">
-                  {sector.shortDescription}
-                </p>
+                <div>
+                  <div className="flex items-center justify-between mb-2 sm:mb-3">
+                    <span className="text-xs font-bold text-[#00CED1] px-2 py-0.5 rounded bg-[#00CED1]/15 border border-[#00CED1]/30 tnum">
+                      {sector.id}
+                    </span>
+                    <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-[#1E90FF] group-hover:translate-x-0.5 transition-all" />
+                  </div>
+                  <h4 className="text-sm sm:text-base font-[600] text-white group-hover:text-[#00BFFF] transition-colors leading-snug">
+                    {sector.name}
+                  </h4>
+                  <p className="text-[11px] sm:text-xs text-slate-400 line-clamp-2 mt-1 sm:mt-1.5 leading-relaxed">
+                    {sector.shortDescription}
+                  </p>
+                </div>
               </Link>
             ))}
           </div>
