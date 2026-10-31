@@ -53,7 +53,7 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
               Businesses
             </Link>
             <ChevronRight className="w-3.5 h-3.5" />
-            <span className="text-[#071426] font-bold">{sector.name}</span>
+            <span className="text-[#071426] font-medium">{sector.name}</span>
           </nav>
         </div>
       </div>
@@ -63,26 +63,26 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider">
                 Sector {sector.id} &bull; Seven Core Verticals
               </div>
-              <h1 className="text-4xl sm:text-5xl font-black text-[#071426] tracking-tight leading-[1.1]">
+              <h1 className="text-4xl sm:text-5xl font-[650] text-[#071426] tracking-tight leading-[1.1]">
                 {sector.name}
               </h1>
-              <p className="text-lg text-[#475569] leading-relaxed max-w-2xl">
+              <p className="text-lg text-[#475569] leading-relaxed max-w-2xl font-normal">
                 {sector.shortDescription}
               </p>
               <div className="pt-2 flex flex-wrap gap-4">
                 <a
                   href="#ventures"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-sm transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-sm transition-all"
                 >
                   <span>Explore {relatedVentures.length} Ventures</span>
                   <ArrowRight className="w-4 h-4" />
                 </a>
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-800 font-bold text-sm border border-[#DCE8F2] transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-slate-50 text-slate-800 font-medium text-sm border border-[#DCE8F2] transition-colors"
                 >
                   <span>Sector Inquiries</span>
                 </Link>
@@ -100,10 +100,10 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
               <div className="absolute bottom-5 left-5 right-5 text-white">
-                <span className="text-[11px] font-bold px-3 py-1 rounded-full bg-[#1E90FF]">
+                <span className="text-[11px] font-semibold px-3 py-1 rounded-full bg-[#1E90FF]">
                   RC Group Portfolio
                 </span>
-                <p className="text-lg font-bold mt-2">{sector.name} Division</p>
+                <p className="text-lg font-semibold mt-2">{sector.name} Division</p>
               </div>
             </div>
           </div>
@@ -116,8 +116,8 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 text-center">
             {sector.stats.map((st, i) => (
               <div key={i} className="pt-3 sm:pt-0">
-                <p className="text-2xl sm:text-3xl font-black text-[#1E90FF]">{st.value}</p>
-                <p className="text-xs sm:text-sm font-bold text-[#071426] mt-1">{st.label}</p>
+                <p className="text-2xl sm:text-3xl font-[650] text-[#1E90FF] tnum">{st.value}</p>
+                <p className="text-xs sm:text-sm font-medium text-[#071426] mt-1">{st.label}</p>
               </div>
             ))}
           </div>
@@ -128,10 +128,10 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl space-y-6">
-            <h2 className="text-3xl font-black text-[#071426] tracking-tight">
+            <h2 className="text-3xl font-[650] text-[#071426] tracking-tight">
               Strategic Vision &amp; Capabilities
             </h2>
-            <p className="text-base sm:text-lg text-[#475569] leading-relaxed">
+            <p className="text-base sm:text-lg text-[#475569] leading-relaxed font-normal">
               {sector.fullDescription}
             </p>
           </div>
@@ -143,7 +143,7 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
                 className="p-5 rounded-2xl bg-[#F5F9FD]/60 border border-[#DCE8F2] flex items-start gap-3"
               >
                 <CheckCircle2 className="w-5 h-5 text-[#00CED1] shrink-0 mt-0.5" />
-                <p className="text-sm font-semibold text-slate-800 leading-relaxed">
+                <p className="text-sm font-normal text-slate-800 leading-relaxed">
                   {highlight}
                 </p>
               </div>
@@ -156,13 +156,13 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
       <section id="ventures" className="py-20 bg-[#F5F9FD]/50 border-t border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-12">
-            <span className="text-xs font-bold uppercase tracking-wider text-[#1E90FF]">
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#1E90FF]">
               Operating Units
             </span>
-            <h2 className="text-3xl font-black text-[#071426] tracking-tight mt-1">
+            <h2 className="text-3xl font-[650] text-[#071426] tracking-tight mt-1">
               Ventures Under {sector.name}
             </h2>
-            <p className="text-sm text-[#475569] mt-2">
+            <p className="text-sm text-[#475569] mt-2 font-normal">
               Discover the individual operating companies and initiatives delivering impact in this domain.
             </p>
           </div>
@@ -175,30 +175,30 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#F5F9FD] text-[#1E90FF] border border-[#DCE8F2]">
+                    <span className="text-xs font-semibold px-3 py-1 rounded-full bg-[#F5F9FD] text-[#1E90FF] border border-[#DCE8F2]">
                       Est. {venture.yearEstablished}
                     </span>
-                    <span className="text-[11px] font-bold text-emerald-600 px-2.5 py-0.5 rounded-full bg-emerald-50">
+                    <span className="text-[11px] font-medium text-emerald-600 px-2.5 py-0.5 rounded-full bg-emerald-50">
                       {venture.status}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#071426] mb-2">
+                  <h3 className="text-xl font-[550] text-[#071426] mb-2">
                     {venture.name}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-[#475569] leading-relaxed mb-4">
+                  <p className="text-xs sm:text-sm text-[#475569] leading-relaxed mb-4 font-normal">
                     {venture.fullDescription}
                   </p>
                 </div>
 
                 <div className="pt-4 border-t border-slate-100 flex items-center justify-between">
-                  <span className="text-xs font-semibold text-slate-500">
+                  <span className="text-xs font-normal text-slate-500">
                     RC Group Entity
                   </span>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-1 text-xs font-bold text-[#1E90FF] hover:underline"
+                    className="inline-flex items-center gap-1 text-xs font-medium text-[#1E90FF] hover:underline"
                   >
                     <span>Enquire</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -215,20 +215,20 @@ export default async function SectorDetailPage({ params }: SectorPageProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="p-8 sm:p-12 rounded-3xl bg-[#071426] text-white flex flex-col md:flex-row items-center justify-between gap-8 shadow-2xl">
             <div className="max-w-xl">
-              <span className="text-xs font-bold tracking-wider uppercase text-[#00CED1]">
+              <span className="text-xs font-semibold tracking-wider uppercase text-[#00CED1]">
                 Collaboration &amp; Inquiries
               </span>
-              <h3 className="text-2xl sm:text-3xl font-black mt-1">
+              <h3 className="text-2xl sm:text-3xl font-[650] mt-1">
                 Partner with RC Group&apos;s {sector.name} Division
               </h3>
-              <p className="text-slate-300 text-sm mt-2">
+              <p className="text-slate-300 text-sm mt-2 font-normal">
                 Whether you are seeking commercial solar deployment, pharmaceutical
                 distribution, or institutional alliance, our desk is ready to discuss.
               </p>
             </div>
             <Link
               href="/contact"
-              className="shrink-0 px-8 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-md transition-all"
+              className="shrink-0 px-8 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-md transition-all"
             >
               Contact Sector Team
             </Link>

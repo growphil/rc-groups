@@ -19,10 +19,10 @@ export default function AboutPage() {
       <section className="relative py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-4">
               About RC Group
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#071426] tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[650] text-[#071426] tracking-tight leading-[1.1]">
               Driven by Purpose. <br />
               <span className="text-[#1E90FF]">Building for Tomorrow.</span>
             </h1>
@@ -60,10 +60,10 @@ export default function AboutPage() {
             </div>
 
             <div className="lg:col-span-6 space-y-6">
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5F9FD] border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5F9FD] border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider">
                 Our Foundation
               </div>
-              <h2 className="text-3xl sm:text-4xl font-black text-[#071426] tracking-tight">
+              <h2 className="text-3xl sm:text-4xl font-[650] text-[#071426] tracking-tight">
                 Two Decades of Steadfast Enterprise Growth
               </h2>
               <p className="text-base text-[#475569] leading-relaxed">
@@ -81,14 +81,14 @@ export default function AboutPage() {
               <div className="pt-4 flex flex-wrap gap-4">
                 <Link
                   href="/journey"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-sm transition-all"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-sm transition-all"
                 >
                   <span>Explore Our Milestones</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <Link
                   href="/businesses"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F5F9FD] hover:bg-[#DCE8F2] text-[#071426] font-bold text-sm border border-[#DCE8F2] transition-colors"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#F5F9FD] hover:bg-[#DCE8F2] text-[#071426] font-medium text-sm border border-[#DCE8F2] transition-colors"
                 >
                   <span>View Our 7 Sectors</span>
                 </Link>
@@ -107,7 +107,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-2xl bg-[#E8F4FE] text-[#1E90FF] flex items-center justify-center mb-6 border border-[#DCE8F2]">
                 <Target className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-black text-[#071426] tracking-tight mb-4">
+              <h3 className="text-2xl font-[550] text-[#071426] tracking-tight mb-4">
                 Our Mission
               </h3>
               <p className="text-[#475569] leading-relaxed">
@@ -123,7 +123,7 @@ export default function AboutPage() {
               <div className="w-12 h-12 rounded-2xl bg-[#071426] text-[#00CED1] flex items-center justify-center mb-6">
                 <Eye className="w-6 h-6" />
               </div>
-              <h3 className="text-2xl font-black text-[#071426] tracking-tight mb-4">
+              <h3 className="text-2xl font-[550] text-[#071426] tracking-tight mb-4">
                 Our Vision
               </h3>
               <p className="text-[#475569] leading-relaxed">
@@ -141,10 +141,10 @@ export default function AboutPage() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5F9FD] border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#F5F9FD] border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-4">
               Our Principles
             </div>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#071426] tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-[650] text-[#071426] tracking-tight">
               Values That Anchor Every Decision
             </h2>
           </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-white flex items-center justify-center text-[#1E90FF] mb-4 border border-[#DCE8F2] shadow-sm">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
-                <h4 className="text-base font-bold text-[#071426] mb-2">
+                <h4 className="text-base font-[550] text-[#071426] mb-2">
                   {val.title}
                 </h4>
                 <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
@@ -175,16 +175,16 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#00CED1]">
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#00CED1]">
                 Portfolio Diversification
               </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mt-2">
+              <h2 className="text-3xl sm:text-4xl font-[650] text-white tracking-tight mt-2">
                 Seven Complementary Business Sectors
               </h2>
             </div>
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 text-sm font-bold text-[#1E90FF] hover:text-[#00BFFF] transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-[#1E90FF] hover:text-[#00BFFF] transition-colors"
             >
               <span>Explore all business profiles</span>
               <ArrowRight className="w-4 h-4" />

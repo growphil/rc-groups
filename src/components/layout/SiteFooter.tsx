@@ -89,7 +89,7 @@ export function SiteFooter() {
 
           {/* Quick Links (Col 5-6) */}
           <div className="lg:col-span-2 space-y-4">
-            <h3 className="text-sm font-bold tracking-wider uppercase text-white border-l-2 border-[#1E90FF] pl-3">
+            <h3 className="text-sm font-semibold tracking-wider uppercase text-white border-l-2 border-[#1E90FF] pl-3">
               Quick Links
             </h3>
             <ul className="space-y-2.5">
@@ -118,7 +118,7 @@ export function SiteFooter() {
 
           {/* Business Sectors (Col 7-9) */}
           <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-sm font-bold tracking-wider uppercase text-white border-l-2 border-[#1E90FF] pl-3">
+            <h3 className="text-sm font-semibold tracking-wider uppercase text-white border-l-2 border-[#1E90FF] pl-3">
               Our Sectors
             </h3>
             <ul className="space-y-2.5">
@@ -138,7 +138,7 @@ export function SiteFooter() {
 
           {/* Contact Details (Col 10-12) */}
           <div className="lg:col-span-3 space-y-4">
-            <h3 className="text-sm font-bold tracking-wider uppercase text-white border-l-2 border-[#1E90FF] pl-3">
+            <h3 className="text-sm font-semibold tracking-wider uppercase text-white border-l-2 border-[#1E90FF] pl-3">
               Contact Us
             </h3>
             <ul className="space-y-3.5 text-sm text-slate-400">
@@ -174,7 +174,7 @@ export function SiteFooter() {
 
         {/* Ventures Ticker / Ribbon */}
         <div className="mt-14 pt-8 border-t border-slate-800/80">
-          <p className="text-xs font-bold tracking-wider uppercase text-slate-400 mb-4">
+          <p className="text-xs font-semibold tracking-wider uppercase text-slate-400 mb-4">
             Our Portfolio Ventures
           </p>
           <div className="flex flex-wrap items-center gap-2.5">

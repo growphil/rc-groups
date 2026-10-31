@@ -65,15 +65,15 @@ export function FeaturedVentures() {
           {/* Left: Section Tag & Main Headline */}
           <div className="shrink-0">
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+              <span className="text-base font-semibold text-[#1E90FF] tracking-wider">
                 05
               </span>
-              <span className="text-slate-300 font-bold">&mdash;</span>
-              <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+              <span className="text-slate-300 font-medium">&mdash;</span>
+              <span className="text-xs font-semibold tracking-[0.2em] text-[#475569] uppercase">
                 FEATURED VENTURES
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-[650] tracking-tight leading-[1.12]">
               <span className="text-[#071426] block">Businesses Turning</span>
               <span className="text-[#1E90FF] block">Purpose Into Progress</span>
             </h2>
@@ -90,7 +90,7 @@ export function FeaturedVentures() {
           <div className="shrink-0">
             <Link
               href="/businesses"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all group"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] text-white text-sm font-medium shadow-sm hover:shadow-md transition-all group"
             >
               <span>View All Businesses</span>
               <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -116,7 +116,7 @@ export function FeaturedVentures() {
                 sizes="(max-width: 1024px) 100vw, 40vw"
                 priority
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-semibold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 HEALTHCARE
               </div>
             </div>
@@ -136,7 +136,7 @@ export function FeaturedVentures() {
 
                 {/* Text Content */}
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                  <h3 className="text-base sm:text-lg font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                     RC Pharmaceuticals
                   </h3>
                   <p className="mt-1.5 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -170,7 +170,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 30vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#00CED1] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-semibold text-[#00CED1] tracking-wider uppercase shadow-xs z-10">
                 ENERGY
               </div>
             </div>
@@ -196,7 +196,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Kyra Green Energy Solutions & RC Solars
                 </h3>
                 <p className="mt-1.5 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -229,7 +229,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 100vw, 30vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2.5 py-0.5 rounded text-[10px] font-semibold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 EDUCATION
               </div>
             </div>
@@ -255,7 +255,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   RC Academy & Skilltalento
                 </h3>
                 <p className="mt-1.5 text-xs sm:text-[13px] text-slate-500 leading-relaxed">
@@ -290,7 +290,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-semibold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 FOOD
               </div>
             </div>
@@ -308,7 +308,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Kyra Food Street
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -341,14 +341,14 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-semibold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 FOOD
               </div>
             </div>
 
             <div className="p-4 flex flex-col justify-between flex-1">
               <div>
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   RC Rice Mandi
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -381,7 +381,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-semibold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 ENTERTAINMENT
               </div>
             </div>
@@ -399,7 +399,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Flyout Trampoline & Kyra Party Hall
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -432,7 +432,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-semibold text-[#1E90FF] tracking-wider uppercase shadow-xs z-10">
                 TRAVEL
               </div>
             </div>
@@ -450,7 +450,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Affo Holidays
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">
@@ -483,7 +483,7 @@ export function FeaturedVentures() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
                 sizes="(max-width: 1024px) 50vw, 20vw"
               />
-              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-extrabold text-[#00CED1] tracking-wider uppercase shadow-xs z-10">
+              <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-sm px-2 py-0.5 rounded text-[10px] font-semibold text-[#00CED1] tracking-wider uppercase shadow-xs z-10">
                 DIGITAL &amp; SERVICES
               </div>
             </div>
@@ -509,7 +509,7 @@ export function FeaturedVentures() {
                   />
                 </div>
 
-                <h3 className="text-sm sm:text-base font-bold text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
+                <h3 className="text-sm sm:text-base font-[550] text-slate-900 group-hover:text-[#1E90FF] transition-colors leading-snug">
                   Medingen & GrowPhil
                 </h3>
                 <p className="mt-1.5 text-xs text-slate-500 leading-relaxed">

@@ -111,7 +111,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
         <div className="overflow-y-auto p-4 sm:p-6 space-y-6">
           {!query.trim() ? (
             <div>
-              <p className="text-xs font-bold uppercase tracking-wider text-[#475569] mb-3">
+              <p className="text-xs font-semibold uppercase tracking-wider text-[#475569] mb-3">
                 Featured Business Sectors
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -126,7 +126,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                       <div className="w-8 h-8 rounded-lg bg-[#E8F4FE] text-[#1E90FF] flex items-center justify-center shrink-0">
                         <Building2 className="w-4 h-4" />
                       </div>
-                      <span className="text-sm font-bold text-[#071426] group-hover:text-[#1E90FF] transition-colors">
+                      <span className="text-sm font-medium text-[#071426] group-hover:text-[#1E90FF] transition-colors">
                         {sector.name}
                       </span>
                     </div>
@@ -140,7 +140,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               {filteredSectors.length > 0 && (
                 <div>
                   <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#1E90FF]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#1E90FF]">
                       Sectors ({filteredSectors.length})
                     </span>
                   </div>
@@ -157,13 +157,13 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                             <Building2 className="w-4 h-4" />
                           </div>
                           <div>
-                            <span className="text-xs font-extrabold text-[#1E90FF] uppercase tracking-wider">
+                            <span className="text-xs font-semibold text-[#1E90FF] uppercase tracking-wider">
                               Sector {sector.id}
                             </span>
-                            <h4 className="text-sm sm:text-base font-bold text-[#071426] group-hover:text-[#1E90FF] transition-colors">
+                            <h4 className="text-sm sm:text-base font-[550] text-[#071426] group-hover:text-[#1E90FF] transition-colors">
                               {sector.name}
                             </h4>
-                            <p className="text-xs text-[#475569] line-clamp-1 mt-0.5">
+                            <p className="text-xs text-[#475569] line-clamp-1 mt-0.5 font-normal">
                               {sector.shortDescription}
                             </p>
                           </div>
@@ -178,7 +178,7 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
               {filteredVentures.length > 0 && (
                 <div>
                   <div className="flex items-center justify-between mb-2.5">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#00CED1]">
+                    <span className="text-xs font-semibold uppercase tracking-wider text-[#00CED1]">
                       Ventures & Companies ({filteredVentures.length})
                     </span>
                   </div>
@@ -196,18 +196,18 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
                           </div>
                           <div>
                             <div className="flex items-center gap-2">
-                              <span className="text-xs font-semibold text-[#00CED1]">
+                              <span className="text-xs font-medium text-[#00CED1]">
                                 {venture.sectorName}
                               </span>
                               <span className="text-[10px] text-slate-400">&bull;</span>
-                              <span className="text-[11px] text-slate-400">
+                              <span className="text-[11px] text-slate-400 font-normal">
                                 Est. {venture.yearEstablished}
                               </span>
                             </div>
-                            <h4 className="text-sm sm:text-base font-bold text-[#071426] group-hover:text-[#00CED1] transition-colors">
+                            <h4 className="text-sm sm:text-base font-[550] text-[#071426] group-hover:text-[#00CED1] transition-colors">
                               {venture.name}
                             </h4>
-                            <p className="text-xs text-[#475569] line-clamp-1 mt-0.5">
+                            <p className="text-xs text-[#475569] line-clamp-1 mt-0.5 font-normal">
                               {venture.shortDescription}
                             </p>
                           </div>
@@ -222,10 +222,10 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
           ) : (
             <div className="py-12 text-center">
               <Search className="w-10 h-10 text-slate-300 mx-auto mb-3" />
-              <p className="text-sm font-semibold text-[#071426]">
+              <p className="text-sm font-medium text-[#071426]">
                 No results found for &ldquo;{query}&rdquo;
               </p>
-              <p className="text-xs text-[#475569] mt-1">
+              <p className="text-xs text-[#475569] mt-1 font-normal">
                 Try searching for &quot;Healthcare&quot;, &quot;Energy&quot;, &quot;Solar&quot;, or &quot;Pharma&quot;.
               </p>
             </div>
@@ -234,11 +234,11 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
 
         {/* Modal Footer */}
         <div className="px-5 py-3 border-t border-[#DCE8F2] bg-[#F5F9FD] flex items-center justify-between text-xs text-[#475569]">
-          <span>RC Group of Companies Directory</span>
+          <span className="font-normal">RC Group of Companies Directory</span>
           <Link
             href="/businesses"
             onClick={onClose}
-            className="font-bold text-[#1E90FF] hover:underline flex items-center gap-1"
+            className="font-medium text-[#1E90FF] hover:underline flex items-center gap-1"
           >
             <span>View all 7 sectors</span>
             <ChevronRight className="w-3.5 h-3.5" />
@@ -248,3 +248,4 @@ export function SearchModal({ isOpen, onClose }: SearchModalProps) {
     </div>
   );
 }
+

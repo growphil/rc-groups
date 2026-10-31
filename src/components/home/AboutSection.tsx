@@ -60,30 +60,30 @@ export function AboutSection() {
           <div className="lg:col-span-6 space-y-6 lg:pl-4">
             {/* 02 — ABOUT RC GROUP Tag */}
             <div className="flex items-center gap-2.5">
-              <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+              <span className="text-base font-semibold text-[#1E90FF] tracking-wider">
                 02
               </span>
-              <span className="text-slate-300 font-bold">&mdash;</span>
-              <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+              <span className="text-slate-300 font-medium">&mdash;</span>
+              <span className="text-xs font-semibold tracking-[0.2em] text-[#475569] uppercase">
                 ABOUT RC GROUP
               </span>
             </div>
 
             {/* Prominent Heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071426] tracking-tight leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[650] text-[#071426] tracking-tight leading-[1.12]">
               Building Businesses <br />
               for a <span className="text-[#1E90FF]">Brighter Tomorrow</span>
             </h2>
 
             {/* Lead Paragraph */}
-            <p className="text-base sm:text-lg font-medium text-[#0B1528] leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg font-normal text-[#0B1528] leading-relaxed max-w-xl">
               What started in 2004 as a vision to create meaningful businesses has
               grown into a diversified group, touching millions of lives across
               India and beyond.
             </p>
 
             {/* Body Paragraph */}
-            <p className="text-sm sm:text-base text-[#475569] leading-relaxed max-w-xl">
+            <p className="text-sm sm:text-base font-normal text-[#475569] leading-relaxed max-w-xl">
               At RC Group, we believe in creating long-term value through
               responsible business practices, innovation and a deep commitment
               to the communities we serve. Our businesses span multiple
@@ -95,7 +95,7 @@ export function AboutSection() {
             <div className="pt-2">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>Learn Our Story</span>
                 <ArrowRight className="w-4 h-4" />
@@ -120,7 +120,7 @@ export function AboutSection() {
                 </div>
 
                 {/* Title */}
-                <h3 className="text-base font-bold text-[#071426] group-hover:text-[#1E90FF] transition-colors mb-1.5">
+                <h3 className="text-base font-[550] text-[#071426] group-hover:text-[#1E90FF] transition-colors mb-1.5">
                   {item.title}
                 </h3>
 

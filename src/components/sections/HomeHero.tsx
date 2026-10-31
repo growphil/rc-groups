@@ -59,13 +59,13 @@ export function HomeHero() {
           {/* Eyebrow Tag */}
           <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xs mb-5 sm:mb-6 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-[#00BFFF] animate-pulse" />
-            <span className="text-xs sm:text-sm font-extrabold tracking-[0.2em] text-[#00BFFF] uppercase">
+            <span className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#00BFFF] uppercase">
               RC Group of Companies
             </span>
           </div>
 
           {/* Main Display Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] font-black text-[#F8FAFC] tracking-[-0.035em] leading-[1.04]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] font-[650] text-[#F8FAFC] tracking-[-0.035em] leading-[1.04]">
             <span>Driven by Purpose.</span>
             <span className="block text-gradient-corporate mt-1 sm:mt-2">
               Focused on People.
@@ -82,7 +82,7 @@ export function HomeHero() {
             {/* Primary Action Button */}
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2.5 py-4 px-7 sm:px-8 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm sm:text-base font-bold shadow-[0_8px_25px_rgba(30,144,255,0.4)] hover:shadow-[0_12px_32px_rgba(30,144,255,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
+              className="inline-flex items-center gap-2.5 py-3.5 sm:py-4 px-7 sm:px-8 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm sm:text-base font-semibold shadow-[0_8px_25px_rgba(30,144,255,0.4)] hover:shadow-[0_12px_32px_rgba(30,144,255,0.6)] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
             >
               <span>Explore Our Businesses</span>
               <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 group-hover:translate-x-1" />
@@ -91,7 +91,7 @@ export function HomeHero() {
             {/* Secondary Action Button */}
             <Link
               href="/about"
-              className="inline-flex items-center gap-2.5 py-4 px-7 sm:px-8 rounded-full bg-[#071426]/60 hover:bg-white/15 active:bg-white/10 text-white text-sm sm:text-base font-bold border border-white/25 hover:border-white/50 backdrop-blur-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
+              className="inline-flex items-center gap-2.5 py-3.5 sm:py-4 px-7 sm:px-8 rounded-full bg-[#071426]/60 hover:bg-white/15 active:bg-white/10 text-white text-sm sm:text-base font-medium border border-white/25 hover:border-white/50 backdrop-blur-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
             >
               <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 group-hover:bg-[#1E90FF] transition-colors">
                 <Play className="w-3 h-3 text-white fill-white ml-0.5" />
@@ -110,14 +110,14 @@ export function HomeHero() {
             {heroMetrics.map((item, idx) => (
               <div key={item.label} className={`flex flex-col ${idx > 0 ? "pt-2 sm:pt-0 sm:pl-6" : ""}`}>
                 <div className="flex items-baseline gap-1.5">
-                  <span className="text-xl sm:text-2xl lg:text-3xl font-black text-white tnum leading-tight">
+                  <span className="text-xl sm:text-2xl lg:text-3xl font-[650] text-white tnum leading-tight">
                     {item.value}
                   </span>
-                  <span className="text-xs sm:text-sm font-bold text-[#00BFFF] uppercase tracking-wide">
+                  <span className="text-xs sm:text-sm font-semibold text-[#00BFFF] uppercase tracking-wide">
                     {item.suffix}
                   </span>
                 </div>
-                <span className="text-[11px] sm:text-xs text-slate-300/80 font-medium leading-snug mt-0.5">
+                <span className="text-[11px] sm:text-xs text-slate-300/80 font-normal leading-snug mt-0.5">
                   {item.desc}
                 </span>
               </div>
@@ -128,7 +128,7 @@ export function HomeHero() {
           <button
             type="button"
             onClick={scrollToNext}
-            className="hidden lg:flex items-center gap-2.5 text-xs font-semibold text-slate-300 hover:text-white transition-colors group shrink-0 pl-6 border-l border-white/10"
+            className="hidden lg:flex items-center gap-2.5 text-xs font-medium text-slate-300 hover:text-white transition-colors group shrink-0 pl-6 border-l border-white/10"
             aria-label="Scroll to discover RC Group"
           >
             <span>Explore</span>

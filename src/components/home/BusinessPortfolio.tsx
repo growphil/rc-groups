@@ -120,7 +120,7 @@ function SectorCard({
         />
 
         {/* Floating Frosted Sector Badge */}
-        <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-[#071426]/75 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-bold tracking-wider uppercase">
+        <div className="absolute top-2.5 left-2.5 z-10 px-2.5 py-0.5 rounded-full bg-[#071426]/75 backdrop-blur-md border border-white/20 text-white text-[10px] sm:text-[11px] font-medium tracking-wider uppercase">
           Sector {sector.id}
         </div>
 
@@ -144,13 +144,13 @@ function SectorCard({
         {/* Text information */}
         <div className="flex-1 min-w-0">
           <span
-            className={`block text-xs font-bold leading-tight ${
+            className={`block text-xs font-semibold leading-tight ${
               isTurquoiseAccent ? "text-[#00CED1]" : "text-[#1E90FF]"
             }`}
           >
             {sector.id}
           </span>
-          <h3 className="text-sm sm:text-base font-bold text-[#071426] group-hover:text-[#1E90FF] transition-colors truncate">
+          <h3 className="text-sm sm:text-base font-[550] text-[#071426] group-hover:text-[#1E90FF] transition-colors truncate">
             {sector.name}
           </h3>
           <p className="text-[11px] sm:text-xs text-[#475569] truncate leading-snug">
@@ -175,7 +175,7 @@ export function BusinessPortfolio() {
         <div className="absolute -top-32 right-1/4 w-[500px] h-[500px] bg-[#87CEEB]/15 rounded-full blur-3xl" />
         <div className="absolute -bottom-32 left-10 w-[600px] h-[600px] bg-[#1E90FF]/10 rounded-full blur-3xl" />
         {/* Subtle decorative curved background typography */}
-        <div className="absolute -top-10 right-8 text-[180px] sm:text-[220px] font-black tracking-tighter text-[#1E90FF]/[0.025] leading-none select-none pointer-events-none">
+        <div className="absolute -top-10 right-8 text-[180px] sm:text-[220px] font-bold tracking-tighter text-[#1E90FF]/[0.025] leading-none select-none pointer-events-none">
           RC
         </div>
       </div>
@@ -184,17 +184,17 @@ export function BusinessPortfolio() {
         {/* Top Tag Indicators */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2.5">
-            <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+            <span className="text-base font-semibold text-[#1E90FF] tracking-wider">
               03
             </span>
-            <span className="text-slate-300 font-bold">&mdash;</span>
-            <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+            <span className="text-slate-300 font-medium">&mdash;</span>
+            <span className="text-xs font-semibold tracking-[0.2em] text-[#475569] uppercase">
               OUR BUSINESS
             </span>
           </div>
 
           <div className="hidden md:flex items-center gap-3">
-            <span className="text-[#475569] font-semibold text-xs uppercase tracking-wider">
+            <span className="text-[#475569] font-medium text-xs uppercase tracking-wider">
               Diverse Industries &bull; Stronger Together
             </span>
           </div>
@@ -203,10 +203,10 @@ export function BusinessPortfolio() {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 sm:mb-12">
           <div className="max-w-2xl">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#071426] tracking-tight leading-[1.15]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[650] text-[#071426] tracking-tight leading-[1.15]">
               Our <span className="text-[#1E90FF]">Business Portfolio</span>
             </h2>
-            <p className="mt-3 text-sm sm:text-base lg:text-lg text-[#475569] leading-relaxed">
+            <p className="mt-3 text-sm sm:text-base lg:text-lg text-[#475569] leading-relaxed font-normal">
               Seven diverse business sectors working together to create value,
               opportunities and a brighter tomorrow.
             </p>
@@ -215,7 +215,7 @@ export function BusinessPortfolio() {
           <div className="shrink-0">
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-semibold text-sm shadow-md hover:shadow-lg transition-all duration-200 group"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-md hover:shadow-lg transition-all duration-200 group"
             >
               <span>Explore All Businesses</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

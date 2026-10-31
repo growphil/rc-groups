@@ -50,6 +50,17 @@ export default {
         '2xl': '1rem',
         '3xl': '1.5rem',
       },
+      fontWeight: {
+        normal: '400',
+        '450': '450',
+        medium: '500',
+        '550': '550',
+        semibold: '600',
+        '650': '650',
+        bold: '700',
+        extrabold: '800',
+        black: '900',
+      },
       fontFamily: {
         sans: ['var(--font-outfit)', 'Outfit', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif'],
       },

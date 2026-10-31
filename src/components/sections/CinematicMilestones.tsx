@@ -388,13 +388,13 @@ export function CinematicMilestones() {
       <section className="py-20 bg-[#07111e] text-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <span className="text-xs sm:text-sm font-bold text-white tracking-widest uppercase">
-              04 OUR MILESTONES
+            <span className="text-xs sm:text-sm font-semibold text-white tracking-widest uppercase">
+              04 &mdash; OUR JOURNEY
             </span>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white mt-3 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-[650] text-white mt-3 tracking-tight">
               A Journey of Purpose and Progress
             </h2>
-            <p className="text-slate-300 text-sm sm:text-base mt-3">
+            <p className="text-slate-300 text-sm sm:text-base mt-3 font-normal">
               Over two decades of purposeful enterprise across healthcare, renewable energy, and community ventures.
             </p>
           </div>
@@ -406,18 +406,18 @@ export function CinematicMilestones() {
                 className="p-8 rounded-3xl bg-slate-900/80 border border-slate-800 shadow-xl"
               >
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-xs font-bold text-[#00CED1] bg-[#00CED1]/10 px-3 py-1 rounded-full border border-[#00CED1]/30">
+                  <span className="text-xs font-semibold text-[#00CED1] bg-[#00CED1]/10 px-3 py-1 rounded-full border border-[#00CED1]/30">
                     {milestone.year}
                   </span>
-                  <span className="text-xs text-slate-400 font-medium">
+                  <span className="text-xs text-slate-400 font-normal">
                     {milestone.sectorName}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-white">{milestone.title}</h3>
-                <span className="text-xs text-[#87CEEB] font-semibold mt-1 block">
+                <h3 className="text-xl font-[550] text-white">{milestone.title}</h3>
+                <span className="text-xs text-[#87CEEB] font-medium mt-1 block">
                   {milestone.subtitle}
                 </span>
-                <p className="text-sm text-slate-300 mt-3 leading-relaxed">
+                <p className="text-sm text-slate-300 mt-3 leading-relaxed font-normal">
                   {milestone.description}
                 </p>
               </div>
@@ -459,15 +459,15 @@ export function CinematicMilestones() {
         {/* ========================================================= */}
         <header className="relative z-30 pt-28 sm:pt-32 lg:pt-36 px-4 sm:px-8 max-w-5xl w-full mx-auto text-center flex flex-col items-center">
           <div className="flex items-center justify-center gap-2.5 mb-2">
-            <span className="text-sm sm:text-base font-extrabold text-[#00BFFF] tracking-wider">
+            <span className="text-sm sm:text-base font-semibold text-[#00BFFF] tracking-wider">
               04
             </span>
-            <span className="text-white/40 font-bold">&mdash;</span>
-            <span className="text-xs sm:text-sm font-bold text-white/90 tracking-[0.2em] uppercase">
+            <span className="text-white/40 font-medium">&mdash;</span>
+            <span className="text-xs sm:text-sm font-semibold text-white/90 tracking-[0.2em] uppercase">
               OUR JOURNEY
             </span>
           </div>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15] drop-shadow-md text-center">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-[650] text-white tracking-tight leading-[1.15] drop-shadow-md text-center">
             A Journey of Purpose and Progress
           </h2>
         </header>

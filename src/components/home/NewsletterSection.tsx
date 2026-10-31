@@ -24,11 +24,11 @@ export function NewsletterSection() {
         <div className="p-8 sm:p-10 rounded-3xl bg-gradient-to-r from-[#F5F9FD] via-white to-[#F5F9FD] border border-[#DCE8F2] shadow-sm flex flex-col lg:flex-row items-center justify-between gap-8">
           {/* Text */}
           <div className="max-w-xl text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-2">
               <Mail className="w-3.5 h-3.5" />
               <span>Stay Connected</span>
             </div>
-            <h3 className="text-2xl sm:text-3xl font-black text-[#071426] tracking-tight">
+            <h3 className="text-2xl sm:text-3xl font-[650] text-[#071426] tracking-tight">
               Get the latest updates from <span className="text-[#1E90FF]">RC Group</span>
             </h3>
             <p className="text-xs sm:text-sm text-[#475569] mt-2">
@@ -57,7 +57,7 @@ export function NewsletterSection() {
                   />
                   <button
                     type="submit"
-                    className="shrink-0 px-6 py-3 sm:py-2.5 rounded-xl sm:rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm font-bold transition-all shadow-sm flex items-center justify-center gap-2 min-h-[44px]"
+                    className="shrink-0 px-6 py-3 sm:py-2.5 rounded-xl sm:rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm font-medium transition-all shadow-sm flex items-center justify-center gap-2 min-h-[44px]"
                   >
                     <span>Subscribe</span>
                     <ArrowRight className="w-4 h-4" />

@@ -19,10 +19,10 @@ export default function BusinessesPage() {
       <section className="py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-4">
               Seven Core Industries
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#071426] tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[650] text-[#071426] tracking-tight leading-[1.1]">
               Our Business <span className="text-[#1E90FF]">Portfolio</span>
             </h1>
             <p className="mt-6 text-lg text-[#475569] leading-relaxed">
@@ -69,10 +69,10 @@ export default function BusinessesPage() {
                       sizes="(max-width: 768px) 100vw, 500px"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
-                    <span className="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-sm text-xs font-black text-[#1E90FF] shadow-sm">
+                    <span className="absolute top-4 left-4 px-3.5 py-1 rounded-full bg-white/95 backdrop-blur-sm text-xs font-semibold text-[#1E90FF] shadow-sm">
                       Sector {sector.id}
                     </span>
-                    <span className="absolute bottom-4 left-4 text-white text-lg font-bold">
+                    <span className="absolute bottom-4 left-4 text-white text-lg font-semibold">
                       {sector.name}
                     </span>
                   </div>
@@ -80,27 +80,27 @@ export default function BusinessesPage() {
                   {/* Narrative & Ventures */}
                   <div className="lg:col-span-7 space-y-6">
                     <div className="flex items-center gap-3">
-                      <span className="text-sm font-bold text-[#1E90FF] uppercase tracking-wider">
+                      <span className="text-sm font-semibold text-[#1E90FF] uppercase tracking-wider">
                         Sector {sector.id} of 07
                       </span>
                       <span className="w-1.5 h-1.5 rounded-full bg-[#1E90FF]" />
-                      <span className="text-xs font-semibold text-[#475569]">
+                      <span className="text-xs font-medium text-[#475569]">
                         {relatedVentures.length} Operating Entities
                       </span>
                     </div>
 
-                    <h2 className="text-2xl sm:text-3xl font-black text-[#071426] tracking-tight">
+                    <h2 className="text-2xl sm:text-3xl font-[650] text-[#071426] tracking-tight">
                       {sector.name}
                     </h2>
 
-                    <p className="text-[#475569] text-base leading-relaxed">
+                    <p className="text-[#475569] text-base leading-relaxed font-normal">
                       {sector.fullDescription}
                     </p>
 
                     {/* Sector Highlights */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                       {sector.highlights.map((h, i) => (
-                        <div key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700">
+                        <div key={i} className="flex items-start gap-2 text-xs sm:text-sm text-slate-700 font-normal">
                           <CheckCircle2 className="w-4 h-4 text-[#00CED1] shrink-0 mt-0.5" />
                           <span>{h}</span>
                         </div>
@@ -109,14 +109,14 @@ export default function BusinessesPage() {
 
                     {/* Ventures Tags */}
                     <div className="pt-4 border-t border-[#DCE8F2]">
-                      <p className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-3">
+                      <p className="text-xs font-semibold text-[#475569] uppercase tracking-wider mb-3">
                         Ventures Under {sector.name}:
                       </p>
                       <div className="flex flex-wrap gap-2">
                         {relatedVentures.map((v) => (
                           <span
                             key={v.id}
-                            className="px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#071426] shadow-sm"
+                            className="px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-medium text-[#071426] shadow-sm"
                           >
                             {v.name}
                           </span>
@@ -128,7 +128,7 @@ export default function BusinessesPage() {
                     <div className="pt-2">
                       <Link
                         href={`/businesses/${sector.slug}`}
-                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-xs sm:text-sm font-bold shadow-sm transition-all"
+                        className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-xs sm:text-sm font-medium shadow-sm transition-all"
                       >
                         <span>View Dedicated Sector Profile</span>
                         <ArrowRight className="w-4 h-4" />

@@ -18,10 +18,10 @@ export default function JourneyPage() {
       <section className="py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-4">
               Two Decades of Impact
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-[#071426] tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[650] text-[#071426] tracking-tight leading-[1.1]">
               A Journey of <span className="text-[#1E90FF]">Purpose &amp; Progress</span>
             </h1>
             <p className="mt-6 text-lg text-[#475569] leading-relaxed">
@@ -77,7 +77,7 @@ export default function JourneyPage() {
               <div key={milestone.year} className="relative pl-6 sm:pl-10">
                 {/* Year Badge on left for desktop */}
                 <div className="sm:absolute sm:-left-32 sm:top-1 text-left sm:text-right w-24 mb-2 sm:mb-0">
-                  <span className="inline-block px-3 py-1 rounded-full bg-[#1E90FF] text-white text-xs font-black shadow-sm">
+                  <span className="inline-block px-3 py-1 rounded-full bg-[#1E90FF] text-white text-xs font-semibold shadow-sm tnum">
                     {milestone.year}
                   </span>
                 </div>
@@ -88,33 +88,33 @@ export default function JourneyPage() {
                 {/* Milestone Content Card */}
                 <div className="bg-white rounded-2xl p-6 sm:p-7 border border-[#DCE8F2] hover:border-[#1E90FF] shadow-card hover:shadow-elevated transition-all group">
                   <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                    <span className="text-xs font-bold text-[#1E90FF] uppercase tracking-wider">
+                    <span className="text-xs font-semibold text-[#1E90FF] uppercase tracking-wider">
                       {milestone.sectorName}
                     </span>
-                    <span className="text-xs text-slate-500 font-medium">
+                    <span className="text-xs text-slate-500 font-normal">
                       Milestone {String(idx + 1).padStart(2, "0")}
                     </span>
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#071426] group-hover:text-[#1E90FF] transition-colors mb-1">
+                  <h3 className="text-xl font-[550] text-[#071426] group-hover:text-[#1E90FF] transition-colors mb-1">
                     {milestone.title}
                   </h3>
 
-                  <p className="text-xs font-semibold text-[#475569] mb-3">
+                  <p className="text-xs font-medium text-[#475569] mb-3">
                     {milestone.subtitle}
                   </p>
 
-                  <p className="text-sm text-[#475569] leading-relaxed mb-4">
+                  <p className="text-sm text-[#475569] leading-relaxed mb-4 font-normal">
                     {milestone.description}
                   </p>
 
                   {/* Ventures in this Milestone */}
                   <div className="pt-3 border-t border-slate-100 flex flex-wrap items-center gap-2">
-                    <span className="text-xs font-bold text-slate-500">Related Entities:</span>
+                    <span className="text-xs font-medium text-slate-500">Related Entities:</span>
                     {milestone.ventures.map((v) => (
                       <span
                         key={v}
-                        className="px-2.5 py-0.5 rounded-full bg-[#F5F9FD] text-[#1E90FF] text-xs font-semibold border border-[#DCE8F2]"
+                        className="px-2.5 py-0.5 rounded-full bg-[#F5F9FD] text-[#1E90FF] text-xs font-medium border border-[#DCE8F2]"
                       >
                         {v}
                       </span>
@@ -128,7 +128,7 @@ export default function JourneyPage() {
           <div className="mt-16 text-center">
             <Link
               href="/businesses"
-              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-md transition-all"
+              className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-md transition-all"
             >
               <span>Explore Businesses Resulting From This Journey</span>
               <ArrowRight className="w-4 h-4" />

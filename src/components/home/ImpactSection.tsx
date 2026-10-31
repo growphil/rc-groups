@@ -86,17 +86,17 @@ export function ImpactSection() {
           <div className="lg:col-span-6 xl:col-span-6 z-10">
             {/* 06 — OUR IMPACT */}
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+              <span className="text-base font-semibold text-[#1E90FF] tracking-wider">
                 06
               </span>
-              <span className="text-slate-300 font-bold">&mdash;</span>
-              <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+              <span className="text-slate-300 font-medium">&mdash;</span>
+              <span className="text-xs font-semibold tracking-[0.2em] text-[#475569] uppercase">
                 OUR IMPACT
               </span>
             </div>
 
             {/* Headline */}
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-[650] tracking-tight leading-[1.12]">
               <span className="text-[#071426] block">Creating a Positive</span>
               <span className="text-[#1E90FF] block">Impact Together</span>
             </h2>
@@ -117,14 +117,14 @@ export function ImpactSection() {
                   <div>
                     <div className="mb-3">{item.icon}</div>
                     {/* Stat number in high-contrast Obsidian Navy */}
-                    <div className="text-2xl sm:text-[26px] xl:text-[28px] font-black text-[#071426] leading-none mb-2">
+                    <div className="text-2xl sm:text-[26px] xl:text-[28px] font-[650] text-[#071426] leading-none mb-2 tnum">
                       {item.stat}
                     </div>
-                    <h3 className="text-xs sm:text-sm font-bold text-[#0B1528] leading-snug">
+                    <h3 className="text-xs sm:text-sm font-[550] text-[#0B1528] leading-snug">
                       {item.label}
                     </h3>
                   </div>
-                  <p className="text-[11px] text-[#475569] leading-tight mt-1.5">
+                  <p className="text-[11px] text-[#475569] leading-tight mt-1.5 font-normal">
                     {item.description}
                   </p>
                 </div>
@@ -135,7 +135,7 @@ export function ImpactSection() {
             <div className="mt-7">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all group"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm font-medium shadow-sm hover:shadow-md transition-all group"
               >
                 <span>Explore Impact</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
@@ -170,7 +170,7 @@ export function ImpactSection() {
                   {pillar.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h4 className="text-base font-bold text-[#071426] mb-1">
+                  <h4 className="text-base font-[550] text-[#071426] mb-1">
                     {pillar.name}
                   </h4>
                   <p className="text-xs sm:text-[13px] text-[#475569] leading-relaxed">

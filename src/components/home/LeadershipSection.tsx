@@ -91,15 +91,15 @@ export function LeadershipSection() {
         >
           <div className="max-w-2xl">
             <div className="flex items-center gap-2.5 mb-3.5">
-              <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+              <span className="text-base font-semibold text-[#1E90FF] tracking-wider">
                 07
               </span>
-              <span className="text-slate-300 font-bold">&mdash;</span>
-              <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+              <span className="text-slate-300 font-medium">&mdash;</span>
+              <span className="text-xs font-semibold tracking-[0.2em] text-[#475569] uppercase">
                 OUR LEADERSHIP
               </span>
             </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black text-[#071426] tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-[650] text-[#071426] tracking-tight leading-tight">
               Leadership with <span className="text-[#1E90FF]">Purpose</span>
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[#475569] leading-relaxed font-normal">
@@ -110,7 +110,7 @@ export function LeadershipSection() {
           <div>
             <Link
               href="/leadership"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
             >
               <span>Meet Our Team</span>
               <ArrowRight className="w-4 h-4" />
@@ -201,19 +201,19 @@ export function LeadershipSection() {
                   <div className="w-8 h-1 bg-[#1E90FF] rounded-full mb-3.5" />
 
                   {/* Leader Name */}
-                  <h3 className="text-2xl sm:text-[26px] font-extrabold text-[#071426] tracking-tight leading-snug group-hover:text-[#1E90FF] transition-colors">
+                  <h3 className="text-2xl sm:text-[26px] font-semibold text-[#071426] tracking-tight leading-snug group-hover:text-[#1E90FF] transition-colors">
                     {leader.name}
                   </h3>
 
                   {/* Professional Designation */}
-                  <p className="text-sm sm:text-base font-medium text-[#475569] mt-1.5 leading-normal">
+                  <p className="text-sm sm:text-base font-normal text-[#475569] mt-1.5 leading-normal">
                     {leader.role}
                   </p>
                 </div>
 
                 {/* "Read Full Profile" Action Row with Blue Circle Arrow Button */}
                 <div className="mt-6 pt-1 flex items-center justify-between">
-                  <span className="text-sm sm:text-[15px] font-bold text-[#1E90FF] group-hover:text-[#1670C7] transition-colors">
+                  <span className="text-sm sm:text-[15px] font-medium text-[#1E90FF] group-hover:text-[#1670C7] transition-colors">
                     Read Full Profile
                   </span>
                   <div className="w-9 h-9 rounded-full bg-[#1E90FF] text-white flex items-center justify-center shadow-[0_4px_12px_rgba(30,144,255,0.35)] group-hover:scale-110 group-hover:bg-[#1670C7] transition-all duration-300 shrink-0">
@@ -232,16 +232,16 @@ export function LeadershipSection() {
           }`}
         >
           <div>
-            <h3 className="text-xl sm:text-2xl font-black text-[#071426]">
+            <h3 className="text-xl sm:text-2xl font-[650] text-[#071426]">
               Great things are built <span className="text-[#1E90FF]">together</span>
             </h3>
-            <p className="text-xs sm:text-sm text-[#475569] mt-1 max-w-xl">
+            <p className="text-xs sm:text-sm text-[#475569] mt-1 max-w-xl font-normal">
               Connect with our leadership to explore institutional alliances, joint ventures, and sustainable expansion.
             </p>
           </div>
           <Link
             href="/leadership"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] text-white font-bold text-xs sm:text-sm shrink-0 transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] text-white font-medium text-xs sm:text-sm shrink-0 transition-colors shadow-sm"
           >
             <span>Meet Our Team</span>
             <ArrowRight className="w-4 h-4" />

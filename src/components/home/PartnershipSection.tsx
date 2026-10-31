@@ -112,17 +112,17 @@ export function PartnershipSection() {
             <div>
               {/* 08 — PARTNERSHIP */}
               <div className="flex items-center gap-2.5 mb-3.5">
-                <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+                <span className="text-base font-semibold text-[#1E90FF] tracking-wider">
                   08
                 </span>
-                <span className="text-slate-300 font-bold">&mdash;</span>
-                <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+                <span className="text-slate-300 font-medium">&mdash;</span>
+                <span className="text-xs font-semibold tracking-[0.2em] text-[#475569] uppercase">
                   PARTNERSHIP
                 </span>
               </div>
 
               {/* Headline */}
-              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
+              <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-[650] tracking-tight leading-[1.12]">
                 <span className="text-[#071426] block">Let’s Build a</span>
                 <span className="text-[#1E90FF] block">Stronger Tomorrow</span>
               </h2>
@@ -143,10 +143,10 @@ export function PartnershipSection() {
                       {pillar.icon}
                     </div>
                     <div>
-                      <h3 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">
+                      <h3 className="text-xs sm:text-sm font-[550] text-slate-900 leading-snug">
                         {pillar.title}
                       </h3>
-                      <p className="text-[11px] text-slate-500 leading-relaxed mt-1">
+                      <p className="text-[11px] text-slate-500 leading-relaxed mt-1 font-normal">
                         {pillar.description}
                       </p>
                     </div>
@@ -174,13 +174,13 @@ export function PartnershipSection() {
             <div className="bg-white rounded-3xl sm:rounded-[32px] p-6 sm:p-8 xl:p-10 border border-slate-100 shadow-[0_20px_60px_-15px_rgba(0,0,0,0.07)] relative z-10">
               {/* Form Title Area */}
               <div className="mb-6">
-                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#1E90FF] block mb-1.5">
+                <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-wider text-[#1E90FF] block mb-1.5">
                   PARTNER WITH US
                 </span>
-                <h3 className="text-2xl sm:text-3xl xl:text-4xl font-black text-slate-900 leading-snug tracking-tight">
+                <h3 className="text-2xl sm:text-3xl xl:text-4xl font-[650] text-slate-900 leading-snug tracking-tight">
                   Get in <span className="text-[#1E90FF]">Touch</span>
                 </h3>
-                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mt-1.5 max-w-xl">
+                <p className="text-xs sm:text-sm text-slate-500 leading-relaxed mt-1.5 max-w-xl font-normal">
                   Share your details and our team will connect with you to explore partnership opportunities.
                 </p>
               </div>
@@ -374,7 +374,7 @@ export function PartnershipSection() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 px-8 rounded-xl sm:rounded-2xl bg-[#1E90FF] hover:bg-[#1670C7] text-white font-bold text-sm sm:text-base shadow-[0_6px_20px_rgba(30,144,255,0.35)] hover:shadow-[0_8px_25px_rgba(30,144,255,0.45)] transition-all flex items-center justify-center gap-2 group mt-2"
+                    className="w-full py-4 px-8 rounded-xl sm:rounded-2xl bg-[#1E90FF] hover:bg-[#1670C7] text-white font-medium text-sm sm:text-base shadow-[0_6px_20px_rgba(30,144,255,0.35)] hover:shadow-[0_8px_25px_rgba(30,144,255,0.45)] transition-all flex items-center justify-center gap-2 group mt-2"
                   >
                     <span>{isSubmitting ? "Sending..." : "Send Enquiry"}</span>
                     <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

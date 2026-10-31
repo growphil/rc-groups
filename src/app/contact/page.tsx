@@ -73,10 +73,10 @@ export default function ContactPage() {
       <section className="py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-4">
               Get in Touch
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[650] text-slate-900 tracking-tight leading-[1.1]">
               Contact &amp; <span className="text-[#1E90FF]">Partnership Inquiries</span>
             </h1>
             <p className="mt-6 text-lg text-slate-600 leading-relaxed">
@@ -177,10 +177,10 @@ export default function ContactPage() {
             <div className="lg:col-span-7">
               <div className="bg-white rounded-3xl p-8 sm:p-10 border border-[#DCE8F2] shadow-elevated">
                 <div className="mb-8">
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#1E90FF]">
+                  <span className="text-xs font-semibold uppercase tracking-wider text-[#1E90FF]">
                     Communication Desk
                   </span>
-                  <h2 className="text-2xl sm:text-3xl font-black text-slate-900 mt-1">
+                  <h2 className="text-2xl sm:text-3xl font-[650] text-slate-900 mt-1">
                     Send Us an Inquiry
                   </h2>
                   <p className="text-sm text-slate-600 mt-1">
@@ -325,7 +325,7 @@ export default function ContactPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3.5 px-6 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] text-white font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2"
+                      className="w-full py-3.5 px-6 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] text-white font-medium text-sm shadow-md transition-all flex items-center justify-center gap-2"
                     >
                       {isSubmitting ? (
                         <span>Sending Message...</span>
