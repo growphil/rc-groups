@@ -1,7 +1,6 @@
 import React from "react";
 import { HomeHero } from "@/components/sections/HomeHero";
 import { AboutSection } from "@/components/home/AboutSection";
-import { BusinessPortfolio } from "@/components/home/BusinessPortfolio";
 import { CinematicMilestones } from "@/components/sections/CinematicMilestones";
 import { FeaturedVentures } from "@/components/home/FeaturedVentures";
 import { ImpactSection } from "@/components/home/ImpactSection";
@@ -18,25 +17,22 @@ export default function HomePage() {
       {/* 2. About RC Group */}
       <AboutSection />
 
-      {/* 3. Business Portfolio */}
-      <BusinessPortfolio />
-
-      {/* 4. Our Milestones Cinematic Scroll */}
+      {/* 3. Our Milestones Cinematic Scroll */}
       <CinematicMilestones />
 
-      {/* 5. Featured Ventures */}
+      {/* 4. Featured Ventures */}
       <FeaturedVentures />
 
-      {/* 6. Our Impact */}
+      {/* 5. Our Impact */}
       <ImpactSection />
 
-      {/* 7. Leadership */}
+      {/* 6. Leadership */}
       <LeadershipSection />
 
-      {/* 8. Partnership */}
+      {/* 7. Partnership */}
       <PartnershipSection />
 
-      {/* 9. Newsletter Section */}
+      {/* 8. Newsletter Section */}
       <NewsletterSection />
     </div>
   );
