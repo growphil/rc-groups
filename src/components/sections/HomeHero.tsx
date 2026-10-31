@@ -25,15 +25,15 @@ export function HomeHero() {
       id="hero"
       className="relative w-full min-h-[92vh] lg:min-h-screen flex flex-col justify-between bg-[#071426] text-white overflow-hidden pt-28 sm:pt-32 pb-10 sm:pb-14 select-none"
     >
-      {/* Background Image: High-Resolution Corporate Sunrise Horizon */}
+      {/* Background Image: High-Resolution Corporate Headquarters Building */}
       <div className="absolute inset-0 w-full h-full pointer-events-none">
         <Image
-          src="/images/hero-frames/frame_0480.webp"
-          alt="RC Group Corporate Horizons - Architecture & Clean Energy Landscape"
+          src="/images/corporate-headquarters.jpg"
+          alt="RC Group Corporate Headquarters Campus Building"
           fill
           priority
-          quality={90}
-          className="object-cover object-center scale-[1.02] transform transition-transform duration-1000 ease-out"
+          quality={95}
+          className="object-cover object-right md:object-center scale-[1.01] transform transition-transform duration-1000 ease-out"
           sizes="100vw"
         />
 
@@ -42,7 +42,7 @@ export function HomeHero() {
           className="absolute inset-0"
           style={{
             background:
-              "linear-gradient(to right, rgba(7, 20, 38, 0.94) 0%, rgba(7, 20, 38, 0.82) 42%, rgba(7, 20, 38, 0.45) 75%, rgba(7, 20, 38, 0.25) 100%)",
+              "linear-gradient(to right, rgba(7, 20, 38, 0.95) 0%, rgba(7, 20, 38, 0.85) 45%, rgba(7, 20, 38, 0.40) 75%, rgba(7, 20, 38, 0.20) 100%)",
           }}
         />
 
