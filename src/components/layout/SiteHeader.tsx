@@ -88,10 +88,10 @@ export function SiteHeader() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`px-3.5 py-2 text-sm font-[450] rounded-full transition-all duration-200 ${
+                    className={`px-3.5 xl:px-4 py-2 text-[15px] xl:text-base font-[500] rounded-full transition-all duration-200 ${
                       isActive
-                        ? "text-[#1E90FF] bg-[#F5F9FD] font-[550] shadow-xs"
-                        : "text-[#0B1528] hover:text-[#00CED1] hover:bg-[#F5F9FD]"
+                        ? "text-[#1E90FF] bg-[#F5F9FD] font-[600] shadow-xs"
+                        : "text-[#071426] hover:text-[#00CED1] hover:bg-[#F5F9FD]"
                     }`}
                   >
                     {item.label}
@@ -105,7 +105,7 @@ export function SiteHeader() {
               {/* Get in Touch CTA */}
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-medium text-[15px] xl:text-base shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 <span>Get in Touch</span>
                 <ArrowRight className="w-4 h-4" />
@@ -156,9 +156,9 @@ export function SiteHeader() {
                       key={item.href}
                       href={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`flex items-center justify-between px-4 py-3.5 min-h-[48px] rounded-xl text-base font-[450] transition-all ${
+                      className={`flex items-center justify-between px-4 py-3.5 min-h-[48px] rounded-xl text-lg font-[500] transition-all ${
                         isActive
-                          ? "bg-[#F5F9FD] text-[#1E90FF] font-[550] border-l-4 border-[#1E90FF]"
+                          ? "bg-[#F5F9FD] text-[#1E90FF] font-[600] border-l-4 border-[#1E90FF]"
                           : "text-slate-800 hover:text-[#00CED1] hover:bg-slate-50 active:bg-slate-100"
                       }`}
                     >
