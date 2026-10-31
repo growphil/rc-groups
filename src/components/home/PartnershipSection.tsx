@@ -110,24 +110,26 @@ export function PartnershipSection() {
           {/* ========================================================= */}
           <div className="lg:col-span-5 flex flex-col justify-between h-full">
             <div>
-              {/* 08 PARTNERSHIP */}
+              {/* 08 — PARTNERSHIP */}
               <div className="flex items-center gap-2.5 mb-3.5">
-                <span className="text-sm font-extrabold text-[#1E90FF]">08</span>
-                <span className="text-xs font-bold text-[#1E90FF] tracking-[0.2em] uppercase">
+                <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+                  08
+                </span>
+                <span className="text-slate-300 font-bold">&mdash;</span>
+                <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
                   PARTNERSHIP
                 </span>
               </div>
 
               {/* Headline */}
               <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
-                <span className="text-[#0D1829] block">Let’s Build a</span>
+                <span className="text-[#071426] block">Let’s Build a</span>
                 <span className="text-[#1E90FF] block">Stronger Tomorrow</span>
               </h2>
 
               {/* Subtitle */}
-              <p className="mt-3.5 text-sm sm:text-[15px] text-slate-500 leading-relaxed font-normal max-w-lg">
-                We collaborate with partners, businesses and organizations to create
-                new opportunities, drive innovation and make a positive impact together.
+              <p className="mt-3.5 text-sm sm:text-[15px] text-[#475569] leading-relaxed font-normal max-w-lg">
+                We collaborate with partners, businesses, and organizations to create new opportunities, drive innovation, and achieve important long-term goals.
               </p>
 
               {/* 4 Feature Cards (2x2 Grid) */}

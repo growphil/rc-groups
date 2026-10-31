@@ -5,13 +5,15 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { RCLogo } from "@/components/ui/RCLogo";
 import { navigationItems } from "@/data/site";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight, Search } from "lucide-react";
+import { SearchModal } from "@/components/ui/SearchModal";
 
 export function SiteHeader() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
 
   useEffect(() => {
     let rafId: number | null = null;
@@ -102,6 +104,16 @@ export function SiteHeader() {
 
             {/* Desktop Actions */}
             <div className="hidden lg:flex items-center gap-3">
+              {/* Circular Search Trigger */}
+              <button
+                type="button"
+                onClick={() => setIsSearchOpen(true)}
+                className="w-10 h-10 rounded-full flex items-center justify-center text-[#071426] hover:text-[#1E90FF] bg-[#F5F9FD] hover:bg-[#E8F4FE] border border-[#DCE8F2] shadow-xs hover:border-[#1E90FF]/40 transition-all cursor-pointer"
+                aria-label="Search sectors and ventures"
+              >
+                <Search className="w-4 h-4" />
+              </button>
+
               {/* Get in Touch CTA */}
               <Link
                 href="/contact"
@@ -114,6 +126,15 @@ export function SiteHeader() {
 
             {/* Mobile Controls */}
             <div className="flex items-center gap-2 lg:hidden">
+              <button
+                type="button"
+                onClick={() => setIsSearchOpen(true)}
+                className="w-11 h-11 min-w-[44px] min-h-[44px] rounded-full flex items-center justify-center text-slate-800 hover:bg-slate-100 active:bg-slate-200 border border-[#DCE8F2] transition-colors"
+                aria-label="Search sectors and ventures"
+              >
+                <Search className="w-5 h-5" />
+              </button>
+
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -186,6 +207,9 @@ export function SiteHeader() {
           </div>
         </div>
       )}
+
+      {/* Global Accessible Search Modal */}
+      <SearchModal isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </>
   );
 }

@@ -90,14 +90,20 @@ export function LeadershipSection() {
           }`}
         >
           <div className="max-w-2xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-bold text-[#1E90FF] uppercase tracking-wider mb-3.5 shadow-xs">
-              Our Leadership
+            <div className="flex items-center gap-2.5 mb-3.5">
+              <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+                07
+              </span>
+              <span className="text-slate-300 font-bold">&mdash;</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+                OUR LEADERSHIP
+              </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black text-[#071426] tracking-tight leading-tight">
               Leadership with <span className="text-[#1E90FF]">Purpose</span>
             </h2>
             <p className="mt-3 text-sm sm:text-base text-[#475569] leading-relaxed font-normal">
-              Guided by visionary leadership with deep commitment to ethical values, sustainable innovation, and long-term societal progress.
+              Meet the people shaping our vision, building meaningful businesses, and guiding our journey forward.
             </p>
           </div>
 
@@ -234,10 +240,10 @@ export function LeadershipSection() {
             </p>
           </div>
           <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#071426] hover:bg-slate-800 text-white font-bold text-xs sm:text-sm shrink-0 transition-colors shadow-sm"
+            href="/leadership"
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] text-white font-bold text-xs sm:text-sm shrink-0 transition-colors shadow-sm"
           >
-            <span>Partner with Us</span>
+            <span>Meet Our Team</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

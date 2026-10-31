@@ -64,22 +64,25 @@ export function FeaturedVentures() {
         >
           {/* Left: Section Tag & Main Headline */}
           <div className="shrink-0">
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-xs sm:text-sm font-bold text-[#1E90FF]">05</span>
-              <span className="text-[11px] sm:text-xs font-bold text-[#1E90FF] tracking-[0.18em] uppercase">
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+                05
+              </span>
+              <span className="text-slate-300 font-bold">&mdash;</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
                 FEATURED VENTURES
               </span>
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-[44px] font-black tracking-tight leading-[1.12]">
-              <span className="text-[#0D1829] block">Businesses Turning</span>
+              <span className="text-[#071426] block">Businesses Turning</span>
               <span className="text-[#1E90FF] block">Purpose Into Progress</span>
             </h2>
           </div>
 
           {/* Middle: Description text */}
           <div className="lg:max-w-md xl:max-w-lg">
-            <p className="text-sm sm:text-[15px] text-slate-500 leading-relaxed font-normal">
-              Our ventures span multiple industries, united by a shared purpose to create value, opportunities and a better tomorrow.
+            <p className="text-sm sm:text-[15px] text-[#475569] leading-relaxed font-normal">
+              Our ventures span multiple industries, united by a shared purpose to create value, opportunities and lasting impact.
             </p>
           </div>
 

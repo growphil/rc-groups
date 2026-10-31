@@ -32,7 +32,7 @@ export function NewsletterSection() {
               Get the latest updates from <span className="text-[#1E90FF]">RC Group</span>
             </h3>
             <p className="text-xs sm:text-sm text-[#475569] mt-2">
-              Receive quarterly investor reports, clean energy research, and corporate milestone announcements.
+              News, milestones and opportunities, delivered straight to your inbox.
             </p>
           </div>
 
@@ -44,7 +44,7 @@ export function NewsletterSection() {
                 <span>Thank you! You are subscribed to RC Group updates.</span>
               </div>
             ) : (
-              <form onSubmit={handleSubscribe} className="space-y-3">
+              <form onSubmit={handleSubscribe} className="space-y-2">
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 p-1.5 sm:p-2 rounded-2xl sm:rounded-full bg-white border border-[#DCE8F2] shadow-sm focus-within:ring-2 focus-within:ring-[#1E90FF]/40 focus-within:border-[#1E90FF]">
                   <input
                     type="email"
@@ -64,6 +64,9 @@ export function NewsletterSection() {
                   </button>
                 </div>
                 {error && <p className="text-rose-500 text-xs px-2 sm:px-4">{error}</p>}
+                <p className="text-[11px] text-slate-400 px-3">
+                  We respect your privacy. No spam, unsubscribe at any time.
+                </p>
               </form>
             )}
           </div>

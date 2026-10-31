@@ -458,12 +458,13 @@ export function CinematicMilestones() {
         {/* TOP HEADER: Centered with ample top padding below navbar   */}
         {/* ========================================================= */}
         <header className="relative z-30 pt-28 sm:pt-32 lg:pt-36 px-4 sm:px-8 max-w-5xl w-full mx-auto text-center flex flex-col items-center">
-          <div className="flex items-center justify-center gap-2 mb-2">
-            <span className="text-sm sm:text-base font-extrabold text-white tracking-wider">
+          <div className="flex items-center justify-center gap-2.5 mb-2">
+            <span className="text-sm sm:text-base font-extrabold text-[#00BFFF] tracking-wider">
               04
             </span>
+            <span className="text-white/40 font-bold">&mdash;</span>
             <span className="text-xs sm:text-sm font-bold text-white/90 tracking-[0.2em] uppercase">
-              OUR MILESTONES
+              OUR JOURNEY
             </span>
           </div>
           <h2 className="text-2xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-[1.15] drop-shadow-md text-center">

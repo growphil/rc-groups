@@ -196,7 +196,7 @@ export function SiteFooter() {
             &copy; {currentYear} RC Group of Companies. All rights reserved.
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6">
             <Link href="/about" className="hover:text-[#1E90FF] transition-colors">
               About Us
             </Link>
@@ -204,7 +204,16 @@ export function SiteFooter() {
               Portfolio
             </Link>
             <Link href="/contact" className="hover:text-[#1E90FF] transition-colors">
-              Inquiries
+              Privacy Policy
+            </Link>
+            <Link href="/contact" className="hover:text-[#1E90FF] transition-colors">
+              Terms of Use
+            </Link>
+            <Link href="/contact" className="hover:text-[#1E90FF] transition-colors">
+              Cookie Policy
+            </Link>
+            <Link href="/sitemap.xml" className="hover:text-[#1E90FF] transition-colors">
+              Sitemap
             </Link>
           </div>
 

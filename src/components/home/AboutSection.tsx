@@ -58,11 +58,12 @@ export function AboutSection() {
 
           {/* Right Column: Narrative Matching UI Reference */}
           <div className="lg:col-span-6 space-y-6 lg:pl-4">
-            {/* 02 ABOUT RC GROUP Tag */}
+            {/* 02 — ABOUT RC GROUP Tag */}
             <div className="flex items-center gap-2.5">
               <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
                 02
               </span>
+              <span className="text-slate-300 font-bold">&mdash;</span>
               <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
                 ABOUT RC GROUP
               </span>
@@ -96,7 +97,7 @@ export function AboutSection() {
                 href="/about"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white font-bold text-sm shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 active:translate-y-0"
               >
-                <span>Know Our Story</span>
+                <span>Learn Our Story</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
             </div>

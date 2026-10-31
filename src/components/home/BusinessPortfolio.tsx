@@ -184,11 +184,12 @@ export function BusinessPortfolio() {
         {/* Top Tag Indicators */}
         <div className="flex items-center justify-between mb-4">
           <div className="flex items-center gap-2.5">
-            <span className="text-[#1E90FF] font-bold text-sm tracking-wide">
+            <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
               03
             </span>
-            <span className="text-[#1E90FF] font-bold text-xs uppercase tracking-widest">
-              Our Businesses
+            <span className="text-slate-300 font-bold">&mdash;</span>
+            <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
+              OUR BUSINESS
             </span>
           </div>
 

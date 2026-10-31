@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, ChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown, Play } from "lucide-react";
 
 export function HomeHero() {
   const scrollToNext = () => {
@@ -65,16 +65,16 @@ export function HomeHero() {
           </div>
 
           {/* Main Display Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[70px] font-black text-[#F8FAFC] tracking-[-0.035em] leading-[1.08]">
-            <span>Building Progress.</span>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] font-black text-[#F8FAFC] tracking-[-0.035em] leading-[1.04]">
+            <span>Driven by Purpose.</span>
             <span className="block text-gradient-corporate mt-1 sm:mt-2">
-              Creating Possibilities.
+              Focused on People.
             </span>
           </h1>
 
           {/* Supporting Lead Description */}
           <p className="mt-5 sm:mt-6 text-base sm:text-lg lg:text-xl text-slate-200/90 max-w-2xl font-normal leading-relaxed">
-            A growing ecosystem of businesses driven by purpose, innovation, and long-term vision—delivering sustainable impact across Healthcare, Renewable Energy, Education, Hospitality, and Modern Enterprise.
+            A diversified group building businesses that create lasting value across industries and communities.
           </p>
 
           {/* Interactive CTAs */}
@@ -90,10 +90,13 @@ export function HomeHero() {
 
             {/* Secondary Action Button */}
             <Link
-              href="/journey"
-              className="inline-flex items-center gap-2.5 py-4 px-7 sm:px-8 rounded-full bg-[#071426]/60 hover:bg-white/15 active:bg-white/10 text-white text-sm sm:text-base font-bold border border-white/25 hover:border-white/50 backdrop-blur-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300"
+              href="/about"
+              className="inline-flex items-center gap-2.5 py-4 px-7 sm:px-8 rounded-full bg-[#071426]/60 hover:bg-white/15 active:bg-white/10 text-white text-sm sm:text-base font-bold border border-white/25 hover:border-white/50 backdrop-blur-md hover:-translate-y-0.5 active:translate-y-0 transition-all duration-300 group"
             >
-              <span>Discover Our Journey</span>
+              <div className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center shrink-0 group-hover:bg-[#1E90FF] transition-colors">
+                <Play className="w-3 h-3 text-white fill-white ml-0.5" />
+              </div>
+              <span>Watch Our Story</span>
             </Link>
           </div>
         </div>

@@ -84,10 +84,13 @@ export function ImpactSection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
           {/* Left Column (Stats + Copy) */}
           <div className="lg:col-span-6 xl:col-span-6 z-10">
-            {/* 06 OUR IMPACT */}
-            <div className="flex items-center gap-2 mb-3">
-              <span className="text-xs sm:text-sm font-bold text-[#1E90FF]">06</span>
-              <span className="text-[11px] sm:text-xs font-bold text-[#1E90FF] tracking-[0.18em] uppercase">
+            {/* 06 — OUR IMPACT */}
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="text-base font-extrabold text-[#1E90FF] tracking-wider">
+                06
+              </span>
+              <span className="text-slate-300 font-bold">&mdash;</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-[#475569] uppercase">
                 OUR IMPACT
               </span>
             </div>
@@ -134,7 +137,7 @@ export function ImpactSection() {
                 href="/about"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[#1E90FF] hover:bg-[#1670C7] active:bg-[#0F5CA8] text-white text-sm font-semibold shadow-sm hover:shadow-md transition-all group"
               >
-                <span>Our Impact Story</span>
+                <span>Explore Impact</span>
                 <ArrowRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
               </Link>
             </div>
