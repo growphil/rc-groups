@@ -56,14 +56,6 @@ export function HomeHero() {
       {/* Main Narrative Area */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full my-auto py-8 lg:py-12">
         <div className="max-w-3xl">
-          {/* Eyebrow Tag */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xs mb-5 sm:mb-6 animate-fade-in">
-            <span className="w-2 h-2 rounded-full bg-[#00BFFF] animate-pulse" />
-            <span className="text-xs sm:text-sm font-semibold tracking-[0.2em] text-[#00BFFF] uppercase">
-              RC Group of Companies
-            </span>
-          </div>
-
           {/* Main Display Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] xl:text-[78px] font-[650] text-[#F8FAFC] tracking-[-0.035em] leading-[1.04]">
             <span>Driven by Purpose.</span>
