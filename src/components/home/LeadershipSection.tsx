@@ -4,7 +4,6 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { LinkedInIcon } from "@/components/ui/SocialIcons";
 import { leadershipTeam } from "@/data/leadership";
 
 export function LeadershipSection() {
@@ -159,20 +158,6 @@ export function LeadershipSection() {
                     />
                   </svg>
                 </div>
-
-                {/* LinkedIn Badge Button: Top-Right Corner */}
-                {leader.linkedIn && (
-                  <a
-                    href={leader.linkedIn}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    className="absolute top-4 right-4 sm:top-5 sm:right-5 w-10 h-10 rounded-xl bg-white shadow-[0_4px_14px_rgba(0,0,0,0.09)] flex items-center justify-center text-[#1E90FF] hover:bg-[#1E90FF] hover:text-white transition-all duration-300 z-30 group/in"
-                    aria-label={`${leader.name} LinkedIn Profile`}
-                  >
-                    <LinkedInIcon className="w-5 h-5 fill-current transition-colors" />
-                  </a>
-                )}
 
                 {/* Decorative Wave Accent: Bottom-Right Wave (sweeping behind white panel) */}
                 <div className="absolute bottom-0 right-0 w-36 h-28 sm:w-44 sm:h-36 pointer-events-none z-10 overflow-hidden">
