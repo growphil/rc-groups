@@ -9,55 +9,53 @@ export function AboutSection() {
   const principles = [
     {
       id: "people-first",
+      num: "01",
       title: "People First",
       description: "Creating opportunities for people and communities.",
-      icon: <Users className="w-5 h-5 text-[#1E90FF]" />,
+      icon: Users,
+      badgeBg: "bg-[#1E90FF]/10 text-[#1E90FF] group-hover:bg-[#1E90FF] group-hover:text-white",
+      accent: "#1E90FF",
     },
     {
       id: "sustainable-growth",
+      num: "02",
       title: "Sustainable Growth",
       description: "Building responsible businesses for the long term.",
-      icon: <TrendingUp className="w-5 h-5 text-[#00CED1]" />,
+      icon: TrendingUp,
+      badgeBg: "bg-[#00CED1]/10 text-[#00CED1] group-hover:bg-[#00CED1] group-hover:text-white",
+      accent: "#00CED1",
     },
     {
       id: "diverse-opportunities",
+      num: "03",
       title: "Diverse Opportunities",
       description: "Across multiple industries and markets.",
-      icon: <Share2 className="w-5 h-5 text-[#1E90FF]" />,
+      icon: Share2,
+      badgeBg: "bg-[#1E90FF]/10 text-[#1E90FF] group-hover:bg-[#1E90FF] group-hover:text-white",
+      accent: "#1E90FF",
     },
     {
       id: "positive-impact",
+      num: "04",
       title: "Positive Impact",
       description: "For communities today and future generations.",
-      icon: <Target className="w-5 h-5 text-[#00CED1]" />,
+      icon: Target,
+      badgeBg: "bg-[#00CED1]/10 text-[#00CED1] group-hover:bg-[#00CED1] group-hover:text-white",
+      accent: "#00CED1",
     },
   ];
 
   return (
-    <section className="py-20 lg:py-28 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-28 bg-white relative overflow-hidden">
       {/* Decorative subtle blue curved surface at bottom-left */}
       <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-gradient-to-tr from-[#E8F4FE] via-[#F5F9FD]/80 to-transparent rounded-full blur-2xl pointer-events-none -z-0" />
       <div className="absolute top-0 right-0 w-1/3 h-1/2 bg-gradient-to-b from-[#F5F9FD]/70 to-transparent pointer-events-none -z-0" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Two-Column Intro */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          {/* Left Column: Interlocking Faceted Polygon Mosaic */}
-          <div className="lg:col-span-6 relative">
-            <div className="relative w-full aspect-square max-w-[540px] mx-auto filter drop-shadow-[0_20px_35px_rgba(30,144,255,0.12)] group">
-              <Image
-                src="/images/Corporate Horizons_ Innovation in Motion.webp"
-                alt="RC Group Corporate Horizons - Healthcare, Solar Energy, Education, Industry, Hospitality, Logistics, Digital Tech"
-                fill
-                priority
-                className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                sizes="(max-width: 768px) 100vw, 540px"
-              />
-            </div>
-          </div>
-
-          {/* Right Column: Narrative Matching UI Reference */}
-          <div className="lg:col-span-6 space-y-6 lg:pl-4">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center">
+          {/* Narrative Column: First on mobile so section header & mission are immediate */}
+          <div className="lg:col-span-6 space-y-5 lg:space-y-6 lg:pl-4 order-1 lg:order-2">
             {/* 02 — ABOUT RC GROUP Tag */}
             <div className="flex items-center gap-2.5">
               <span className="text-base font-semibold text-[#1E90FF] tracking-wider">
@@ -102,34 +100,62 @@ export function AboutSection() {
               </Link>
             </div>
           </div>
+
+          {/* Graphic Column: Second on mobile, left on desktop */}
+          <div className="lg:col-span-6 relative order-2 lg:order-1">
+            <div className="relative w-full aspect-square max-w-[420px] sm:max-w-[500px] lg:max-w-[540px] mx-auto filter drop-shadow-[0_20px_35px_rgba(30,144,255,0.12)] group">
+              <Image
+                src="/images/Corporate Horizons_ Innovation in Motion.webp"
+                alt="RC Group Corporate Horizons - Healthcare, Solar Energy, Education, Industry, Hospitality, Logistics, Digital Tech"
+                fill
+                priority
+                className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                sizes="(max-width: 768px) 100vw, 540px"
+              />
+            </div>
+          </div>
         </div>
 
-        {/* Four Principles Row */}
-        <div className="mt-16 pt-12 border-t border-slate-100">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {principles.map((item) => (
-              <div
-                key={item.id}
-                className="group p-5 rounded-2xl bg-[#F8FBFE] hover:bg-white border border-[#DCE8F2] hover:border-[#1E90FF]/40 shadow-xs hover:shadow-[0_10px_25px_-5px_rgba(30,144,255,0.12)] transition-all duration-300 flex flex-col items-start hover:-translate-y-1"
-              >
-                {/* Circular Icon in soft light blue */}
-                <div className="w-12 h-12 rounded-xl bg-[#E8F4FE] group-hover:bg-[#1E90FF] text-[#1E90FF] group-hover:text-white flex items-center justify-center mb-4 transition-all duration-300 shadow-xs">
-                  {React.cloneElement(item.icon, {
-                    className: "w-5 h-5 transition-colors duration-300 group-hover:text-white",
-                  })}
+        {/* Four Principles Row: Compact 2x2 inline grid on mobile, 4 columns on desktop */}
+        <div className="mt-12 sm:mt-16 pt-10 sm:pt-12 border-t border-[#DCE8F2]">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-5 lg:gap-6">
+            {principles.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.id}
+                  className="group relative p-4 sm:p-6 rounded-2xl bg-[#F5F9FD] hover:bg-white border border-[#DCE8F2] hover:border-[#1E90FF]/40 shadow-xs hover:shadow-[0_12px_28px_-6px_rgba(30,144,255,0.15)] transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 overflow-hidden"
+                >
+                  {/* Subtle top accent highlight on hover */}
+                  <div
+                    className="absolute top-0 inset-x-0 h-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    style={{ backgroundColor: item.accent }}
+                  />
+
+                  {/* Header: Icon & Numeral */}
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
+                    <div
+                      className={`w-9 h-9 sm:w-11 sm:h-11 rounded-xl flex items-center justify-center transition-all duration-300 shadow-xs ${item.badgeBg}`}
+                    >
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                    <span className="text-[11px] sm:text-xs font-semibold text-slate-400/80 tracking-wider">
+                      {item.num}
+                    </span>
+                  </div>
+
+                  {/* Content: Title and Description */}
+                  <div>
+                    <h3 className="text-sm sm:text-base font-[600] text-[#071426] group-hover:text-[#1E90FF] transition-colors leading-snug mb-1 sm:mb-1.5">
+                      {item.title}
+                    </h3>
+                    <p className="text-[11px] sm:text-xs lg:text-sm text-[#475569] leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
-
-                {/* Title */}
-                <h3 className="text-base font-[550] text-[#071426] group-hover:text-[#1E90FF] transition-colors mb-1.5">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-xs sm:text-sm text-[#475569] leading-relaxed">
-                  {item.description}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
