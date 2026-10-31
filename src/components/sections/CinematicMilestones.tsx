@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { journeyMilestones } from "@/data/journey";
 
-const TOTAL_FRAMES = 479;
+const TOTAL_FRAMES = 239;
 const CONCURRENT_PRELOADS = 4;
 
 export function CinematicMilestones() {
