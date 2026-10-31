@@ -11,18 +11,18 @@ export const metadata: Metadata = {
 
 export default function JourneyPage() {
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-16 sm:pt-20 pb-12 sm:pb-20">
       {/* Hero Banner */}
-      <section className="py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
+      <section className="py-10 sm:py-14 lg:py-16 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white border border-[#DCE8F2] text-[11px] sm:text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-3 sm:mb-4">
               Two Decades of Impact
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[650] text-[#071426] tracking-tight leading-[1.1]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[650] text-[#071426] tracking-tight leading-[1.1]">
               A Journey of <span className="text-[#1E90FF]">Purpose &amp; Progress</span>
             </h1>
-            <p className="mt-6 text-lg text-[#475569] leading-relaxed">
+            <p className="mt-3.5 sm:mt-5 text-sm sm:text-base lg:text-lg text-[#475569] leading-relaxed">
               Explore the key chronological milestones that have shaped RC Group of
               Companies from 2004 to the present day. Each step represents our
               dedication to community need, ethical governance, and sustainable innovation.
@@ -32,7 +32,7 @@ export default function JourneyPage() {
       </section>
 
       {/* Panorama Stat Banner */}
-      <section className="py-12 bg-white">
+      <section className="py-6 sm:py-10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative rounded-3xl overflow-hidden shadow-card border border-[#DCE8F2]">
             <div className="relative h-64 sm:h-80 w-full">

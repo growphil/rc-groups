@@ -68,18 +68,18 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-24 pb-20">
+    <div className="pt-16 sm:pt-20 pb-12 sm:pb-20">
       {/* Hero Banner */}
-      <section className="py-20 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
+      <section className="py-10 sm:py-14 lg:py-16 bg-gradient-to-b from-[#F5F9FD] to-white border-b border-[#DCE8F2]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#DCE8F2] text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-4">
+            <div className="inline-flex items-center gap-2 px-3 sm:px-3.5 py-1 sm:py-1.5 rounded-full bg-white border border-[#DCE8F2] text-[11px] sm:text-xs font-semibold text-[#1E90FF] uppercase tracking-wider mb-3 sm:mb-4">
               Get in Touch
             </div>
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-[650] text-slate-900 tracking-tight leading-[1.1]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-[650] text-slate-900 tracking-tight leading-[1.1]">
               Contact &amp; <span className="text-[#1E90FF]">Partnership Inquiries</span>
             </h1>
-            <p className="mt-6 text-lg text-slate-600 leading-relaxed">
+            <p className="mt-3.5 sm:mt-5 text-sm sm:text-base lg:text-lg text-slate-600 leading-relaxed">
               We welcome dialogue with investors, enterprise clients, community
               stakeholders, and prospective partners. Connect directly with our
               corporate desk.
@@ -89,12 +89,12 @@ export default function ContactPage() {
       </section>
 
       {/* Main Grid: Details & Form */}
-      <section className="py-20 bg-white">
+      <section className="py-8 sm:py-14 lg:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             {/* Contact Information Cards (Col 1-5) */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-8 rounded-3xl bg-[#F5F9FD]/80 border border-[#DCE8F2] shadow-card space-y-6">
+              <div className="p-6 sm:p-8 rounded-2xl sm:rounded-3xl bg-[#F5F9FD]/80 border border-[#DCE8F2] shadow-card space-y-6">
                 <div>
                   <span className="text-xs font-bold text-[#1E90FF] uppercase tracking-wider">
                     Official Head Office
