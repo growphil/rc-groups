@@ -52,8 +52,8 @@
 html {
   color-scheme: light;
   scroll-behavior: smooth;
-  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+  font-family: var(--font-outfit), 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "tnum";
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -62,8 +62,8 @@ html {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+  font-family: var(--font-outfit), 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-feature-settings: "tnum";
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
 }
@@ -71,8 +71,8 @@ body {
 /* Headings: Tight tracking, balanced wrapping, crisp optical alignment */
 h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
-  letter-spacing: -0.028em;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11", "tnum";
+  letter-spacing: -0.025em;
+  font-feature-settings: "tnum";
 }
 
 p {
@@ -93,7 +93,7 @@ textarea {
   touch-action: manipulation;
 }
 
-/* Ensure form controls & buttons inherit Inter font */
+/* Ensure form controls & buttons inherit Outfit font */
 input,
 button,
 select,

@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 
-const inter = Inter({
+const outfit = Outfit({
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-outfit",
   display: "swap",
 });
 
@@ -65,8 +65,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${inter.className}`}>
-      <body className={`${inter.className} min-h-screen flex flex-col bg-white text-brand-text font-sans antialiased`}>
+    <html lang="en" className={`${outfit.variable} ${outfit.className}`}>
+      <body className={`${outfit.className} min-h-screen flex flex-col bg-white text-brand-text font-sans antialiased`}>
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />
